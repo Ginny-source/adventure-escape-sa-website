@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Us - Sparks Website</title>
+   
+</head>
+<body>
+    <header>
+        <h1>Rate Your Experience</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="packages.html">Packages</a> |
+            <a href="gallery.html">Gallery</a> |
+            <a href="rate-us.html">Rate Us</a> |
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="rating-container">
+            <h2 style="text-align:center;">How was your adventure?</h2>
+            <p style="text-align:center;">Your feedback helps us improve</p>
+
+            <form action="#" method="post">
+                <label>Your Name:</label>
+                <input type="text" name="name" placeholder="Enter your name" required>
+
+                <label>Email:</label>
+                <input type="email" name="email" placeholder="Enter your email" required>
+
+                <label>Which activity did you do?</label>
+                <select name="activity" required>
+                    <option value="">-- Select --</option>
+                    <option value="hiking">Hiking</option>
+                    <option value="zipline">Zipline</option>
+                    <option value="climbing">Rock Climbing</option>
+                    <option value="buffet">Buffet</option>
+                    <option value="combo">Family Combo</option>
+                </select>
+
+                <label>Rate Us:</label>
+                <div class="stars">
+                    <input type="radio" id="star5" name="rating" value="5" required><label for="star5">★</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                </div>
+
+                <label>Your Review:</label>
+                <textarea name="review" rows="5" placeholder="Tell us about your experience..." required></textarea>
+
+                <button type="submit">Submit Rating</button>
+            </form>
+
+            <h3 style="margin-top:30px;">Recent Reviews</h3>
+            <div class="review">
+                <strong>★★★★★ - ORATILE M.</strong>
+                <p>"Amazing zipline! Staff were professional. Will come again with family."</p>
+            </div>
+            <div class="review">
+                <strong>★★★★☆ - TSHIAMO M.</strong>
+                <p>"Hiking trail was beautiful. Buffet was delicious. Highly recommend!"</p>
+            </div>
+            <div class="review">
+                <strong>★★★★★ - Busisiwe N.</strong>
+                <p>"Best climbing experience ever. Safety first, fun always!"</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sparks Website</p>
+    </footer>
+</body>
+</html>

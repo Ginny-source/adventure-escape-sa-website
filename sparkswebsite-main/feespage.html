@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adventure Escape SA | Fees & Packages</title>
+
+</head>
+<body>
+
+<header>
+  <nav aria-label="Main navigation">
+    <a href="index.html">
+      <img src="images/logo.jpg" alt="Adventure Escape SA logo" width="105">
+    </a>
+    <p>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="fees.html" aria-current="page">Fees & Packages</a>
+      <a href="contact.html">Contact</a>
+    </p>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <p class="eyebrow">Adventure Packages</p>
+    <h1>Choose Your Experience.</h1>
+    <p class="intro">Choose from a selection of exciting outdoor experiences designed for individuals, families, teams and adventure enthusiasts.</p>
+  </section>
+
+  <section class="grid">
+    <article class="package">
+      <h2>Ultimate Adventure Day</h2>
+      <p class="price">R1 500</p>
+      <p>A full-day outdoor adventure featuring multiple exciting activities.</p>
+      <ul>
+        <li>Guided hiking trail</li>
+        <li>Ziplining</li>
+        <li>Kayaking</li>
+        <li>Lunch</li>
+        <li>Safety briefing and equipment</li>
+      </ul>
+    </article>
+
+    <article class="package">
+      <h2>Family Explorer Package</h2>
+      <p class="price">R1 500</p>
+      <p>A fun-filled outdoor experience designed for families.</p>
+      <ul>
+        <li>Nature walk</li>
+        <li>Obstacle course</li>
+        <li>Picnic area</li>
+        <li>Family games</li>
+        <li>Guided wildlife spotting</li>
+      </ul>
+    </article>
+
+    <article class="package">
+      <h2>Mountain Adventure Package</h2>
+      <p class="price">R1 500</p>
+      <p>A guided mountain adventure for outdoor enthusiasts.</p>
+      <ul>
+        <li>Mountain hiking</li>
+        <li>Scenic viewpoints</li>
+        <li>Rock scrambling</li>
+        <li>Safety equipment</li>
+        <li>Professional guide</li>
+      </ul>
+    </article>
+
+    <article class="package">
+      <h2>Corporate Team Challenge</h2>
+      <p class="price">R1 500</p>
+      <p>Team-building activities designed for businesses and organisations.</p>
+      <ul>
+        <li>Team obstacle course</li>
+        <li>Orienteering challenge</li>
+        <li>Raft-building activity</li>
+        <li>Leadership exercises</li>
+        <li>Team awards</li>
+      </ul>
+    </article>
+
+    <article class="package">
+      <h2>Ziplining Adventure</h2>
+      <p class="price">R750</p>
+      <p>Experience breathtaking views while ziplining through the forest.</p>
+      <ul>
+        <li>Safety briefing</li>
+        <li>Equipment hire</li>
+        <li>Professional instructors</li>
+      </ul>
+    </article>
+
+    <article class="package">
+      <h2>Kayaking Experience</h2>
+      <p class="price">R750</p>
+      <p>Paddle through scenic rivers and lakes.</p>
+      <ul>
+        <li>Kayak and paddle</li>
+        <li>Safety equipment</li>
+        <li>Guided route</li>
+      </ul>
+    </article>
+
+    <article class="package">
+      <h2>Rock Climbing Session</h2>
+      <p class="price">R750</p>
+      <p>Learn climbing techniques on natural rock faces.</p>
+      <ul>
+        <li>Climbing equipment</li>
+        <li>Safety instruction</li>
+        <li>Professional guide</li>
+      </ul>
+    </article>
+  </section>
+
+  <section>
+    <p class="eyebrow">Calculate Your Fees</p>
+    <h2>Build Your Own Adventure</h2>
+    <form id="fee-form">
+      <label><input type="checkbox" name="fee" value="1500"> Ultimate Adventure Day — R1 500</label>
+      <label><input type="checkbox" name="fee" value="1500"> Family Explorer Package — R1 500</label>
+      <label><input type="checkbox" name="fee" value="1500"> Mountain Adventure Package — R1 500</label>
+      <label><input type="checkbox" name="fee" value="1500"> Corporate Team Challenge — R1 500</label>
+      <label><input type="checkbox" name="fee" value="750"> Ziplining Adventure — R750</label>
+      <label><input type="checkbox" name="fee" value="750"> Kayaking Experience — R750</label>
+      <label><input type="checkbox" name="fee" value="750"> Rock Climbing Session — R750</label>
+      <p class="total" id="total">Estimated total: R0</p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p><strong>Adventure Escape SA</strong></p>
+  <p>All package prices shown in South African Rand (ZAR).</p>
+</footer>
+
+<script>
+const boxes = document.querySelectorAll('input[name="fee"]');
+const total = document.querySelector('#total');
+
+boxes.forEach(function(box) {
+  box.addEventListener('change', function() {
+    let amount = 0;
+    boxes.forEach(function(item) {
+      if (item.checked) {
+        amount += Number(item.value);
+      }
+    });
+    total.textContent = 'Estimated total: R' + amount.toLocaleString('en-ZA');
+  });
+});
+</script>
+
+</body>
+</html>
