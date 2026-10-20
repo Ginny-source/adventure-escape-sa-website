@@ -4,83 +4,236 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Packages - Sparks Website</title>
+    <link rel="stylesheet" href="style.css">
+    
     
 </head>
 <body>
-    <header>
-        <h1>Sparks Adventure Packages</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="about.html">About</a> |
-            <a href="packages.html">Packages</a> |
-            <a href="gallery.html">Gallery</a> |
-            <a href="rate-us.html">Rate Us</a> |
-            <a href="contact.html">Contact</a>
+    <!-- Header / Navigation Bar -->
+    <header class="site-header">
+        <div class="logo-container">
+        <div class="logo-circle">
+            <img src="images/adventure escape sa.jpeg" width="300px" height="300px" alt="Adventure Escape SA Logo" class="brand-logo">
+        </div>
+        </div>
+        <br>
+        <nav class="nav-links">
+            <a href="index.html" >HOME</a>
+            <a href="aboutus.html">ABOUT US</a>
+            <a href="packages.html">PACKAGES</a>
+            <a href="feespage.html">FEES</a>
+            <a href="contactus.html">CONTACT US</a>
+            <a href="indivisual.html"> INDIVISUAL</a>
+            <a href="overview.html"> OVERVIEW</a>
+            <a href="rate_us.html"> RATE US</a>
+            <a href="testimonials.html"> TESTEMONIES</a>
+            <a href="booking.html">BOOKINGS</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="faq.html">FAQ</a>
         </nav>
     </header>
 
     <main>
-        <h2 style="text-align:center; margin-top:20px;">Choose Your Adventure</h2>
-        <div class="packages-container">
+
+        <!-- Packages & Activities Section -->
+    <main class="packages-page">
+        <div class="container">
             
-            <div class="package-card">
-                <img src="images/a-woman-giving-the-peace-sign-to-the-camera-while-hiking-7625085_11zon.JPG" alt="Hiking Package">
-                <h3>Hiking Package</h3>
-                <p class="price">R350 / person</p>
-                <ul>
-                    <li>5km Guided Drakensberg Trail</li>
-                    <li>Free bottled water</li>
-                    <li>Professional guide</li>
-                    <li>2 Hours</li>
-                </ul>
-                <a href="booking.html" class="btn">Book Now</a>
-                <p style="font-size:11px; margin-top:10px;">Figure 1: Hiking (Source: Pexels, 2023)</p>
-            </div>
+            <!-- Page Title Area -->
+            <div class="page-header">
+                <span class="section-tag">ALL ADVENTURES</span>
+                <h1>Packages & Activities</h1>
 
-            <div class="package-card">
-                <img src="images/zipline-ziprider-1-1920x700.avif" alt="Zipline Package">
-                <h3>Zipline Extreme</h3>
-                <p class="price">R550 / person</p>
-                <ul>
-                    <li>1.2km Zipline Ride</li>
-                    <li>Safety gear included</li>
-                    <li>GoPro video</li>
-                    <li>1 Hour</li>
-                </ul>
-                <a href="booking.html" class="btn">Book Now</a>
-                <p style="font-size:11px; margin-top:10px;">Figure 2: Zipline (Source: Drakensberg Canopy, 2024)</p>
-            </div>
+        <h2 style="text-align:center; margin-top:20px;">Choose Your Adventure</h2>
+        <div class="packages-container"><br>
 
-            <div class="package-card">
-                <img src="images/climbing_2657588b_(1).webp" alt="Climbing Package">
-                <h3>Rock Climbing</h3>
-                <p class="price">R450 / person</p>
-                <ul>
-                    <li>Beginner to advanced walls</li>
-                    <li>All equipment provided</li>
-                    <li>Certified instructor</li>
-                    <li>3 Hours</li>
-                </ul>
-                <a href="booking.html" class="btn">Book Now</a>
-                <p style="font-size:11px; margin-top:10px;">Figure 3: Climbing (Source: Pixabay, 2022)</p>
-            </div>
+                <!-- Filter Controls -->
+                <div class="filter-controls">
+                    <div class="main-tabs">
+                        <button class="tab-btn" id="packagesTab" onclick="switchTab('packages')">Packages</button>
+                        <button class="tab-btn active" id="activitiesTab" onclick="switchTab('activities')">Activities</button>
+                    </div>
 
-            <div class="package-card"
-                <h3>Family Buffet + Activity</h3>
-                <p class="price">R750 / person</p>
-                <ul>
-                    <li>Any 1 activity + Buffet</li>
-                    <li>Unlimited buffet lunch</li>
-                    <li>Free kids under 6</li>
-                    <li>Full Day</li>
-                </ul>
-                <a href="booking.html" class="btn">Book Now</a>
+                    <!-- Packages Grid -->
+            <div class="packages-grid">
+                
+                <!-- Package 1 : UNLIMITED ADVENTURE DAY-->
+                <div class="package-card">
+                    <div class="card-image">
+                        <img src="images/unlimited package.avif" alt="UNLIMITED ADVENTURE DAY">
+                        <div class="card-badges">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="location"> Western Cape, Adventure escape SA</span>
+                        <h2>UNLIMITED ADVENTURE DAY</h2>
+                        <p class="tagline">A FULL-DAY OUTDOOR ADVENTURE FEATURING MULTIPLE EXCITING ACTIVITIES </p>
+                        <p class="description">Trek through Torres del Paine, crossing glaciers, hanging valleys, and camping beneath the granite towers that define Patagonia.</p>
+                        <div class="card-footer">
+                            <div class="price"><strong>R1500</strong> <span>per package</span></div>
+                            <a href="feespage.html" class="btn-card">Select</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 2: MOUNTAIN ADVENTURE -->
+                <div class="package-card">
+                    <div class="card-image">
+                        <img src="images/mountain.avif" alt="MOUNTAIN ADVENTURE" height="500px">
+                    </div>
+                    <div class="card-content">
+                        <span class="location">Western Cape, Adventure escape SA</span>
+                        <h2>MOUNTAIN ADVENTURE</h2>
+                        <p class="tagline">A GUIDED MOUNTAIN ADVENTURE OUTDOOR ENTHUSIASTS</p>
+                        <p class="description">Summit three iconic Alpine peaks across Switzerland and Italy with UIAA-certified guides. A high-altitude progression for confident climbers.</p>
+                        <div class="card-footer">
+                            <div class="price"><strong>R1500</strong> <span>per package</span></div>
+                            <a href="feespage.html" class="btn-card">Select</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 3: FAMILY EXPLORER  -->
+                <div class="package-card">
+                    <div class="card-image">
+                        <img src="images/family explorer.avif" alt="FAMILY EXPLORER">
+                    </div>
+                    <div class="card-content">
+                        <span class="location">Western Cape, Adventure escape SA</span>
+                        <h2>FAMILY EXPLORER</h2>
+                        <p class="tagline">A FUN DAY-FILLED OUTDOOR EXPERIENCE DESIGNED FOR FAMALIES</p>
+                        <p class="description">Summit three iconic Alpine peaks across Switzerland and Italy with UIAA-certified guides. A high-altitude progression for confident climbers.</p>
+                        <div class="card-footer">
+                            <div class="price"><strong>R1500</strong> <span>per package</span></div>
+                            <a href="feespage.html" class="btn-card">Select</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 4 : CORPORATE TEAMCHALLEGE -->
+                <div class="package-card">
+                    <div class="card-image">
+                        <img src="images/coperate challege.avif" alt="CORPORATE TEAM CHALLEGE ">
+                    </div>
+                    <div class="card-content">
+                        <span class="location">Western Cape, Adventure escape SA</span>
+                        <h2>CORPORATE TEAM CHALLEGE </h2>
+                        <p class="tagline">TEAM-BUILDING ACTIVITIES DESIGNED FOR BUSINESS AND ORGANISATIONS</p>
+                        <p class="description">Navigate ancient red dunes, fossil riverbeds, and the Deadvlei salt pan in one of the most visually stunning environments on the planet.</p>
+                        <div class="card-footer">
+                            <div class="price"><strong>R1500</strong> <span>per package</span></div>
+                            <a href="feespage.html" class="btn-card">Select</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+            <!-- Activities View Grid (Default active state matching your screenshot) -->
+            <div class="content-view active" id="activitiesView">
+                <div class="packages-grid">
+                    
+                    <!-- Activity 1:Sky diving -->
+                    <div class="package-card">
+                        <div class="card-image">
+                            <img src="images/a-woman-giving-the-peace-sign-1024x576.jpg" alt="sky diving">
+                        </div>
+                        <div class="card-content">
+                            <span class="location">Western Cape, Adventure escape SA</span>
+                            <h2>Sky Diving</h2>
+                            <p class="description">Tackle world-class class IV-V rapids through pristine glacial river canyons with expert river rescue leads.</p>
+                            <div class="card-footer">
+                                <div class="price-action-group">
+                                    <div class="price"><strong>R750</strong></div>
+                                    <div class="action-buttons">
+                                        <a href="feespage.html" class="btn-view">View</a>
+                                        <a href="booking.html" class="btn-add">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activity 2: Rock Climbing -->
+                    <div class="package-card">
+                        <div class="card-image">
+                            <img src="images/rock climbing.avif" alt="Rock Climbing">
+                           </div>
+                        <div class="card-content">
+                            <span class="location">Western Cape, Adventure escape SA</span>
+                            <h2>Rock Climbing </h2>
+                            <p class="description">Climb iconic limestone cliffs overlooking the beautiful mountains and feeling the breeze.</p>
+                            <div class="card-footer">
+                                <div class="price-action-group">
+                                    <div class="price"><strong>R750</strong></div>
+                                    <div class="action-buttons">
+                                        <a href="feespage.html" class="btn-view">View</a>
+                                        <a href="booking.html" class="btn-add">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activity 3: Kayaking -->
+                    <div class="package-card">
+                        <div class="card-image">
+                            <img src="images/kayaking.jpg" alt="Kayaking">
+                        </div>
+                        <div class="card-content">
+                            <span class="location">Western Cape, Adventure escape SA</span>
+                            <h2>Kayaking</h2>
+                            <p class="description">Soar high above alpine lakes and snow-capped peaks accompanied by a certified tandem pilot.</p>
+                            <div class="card-footer">
+                                <div class="price-action-group">
+                                    <div class="price"><strong>R750</strong></div>
+                                    <div class="action-buttons">
+                                        <a href="feespage.html" class="btn-view">View</a>
+                                        <a href="booking.htm" class="btn-add">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
 
         </div>
     </main>
 
-    <footer>
+    <!-- Simple JS to handle tab switching -->
+    <script>
+        function switchTab(tabName) {
+            const packagesTab = document.getElementById('packagesTab');
+            const activitiesTab = document.getElementById('activitiesTab');
+            const packagesView = document.getElementById('packagesView');
+            const activitiesView = document.getElementById('activitiesView');
+            const difficultyFilters = document.getElementById('difficultyFilters');
+            const categoryFilters = document.getElementById('categoryFilters');
+
+            if (tabName === 'packages') {
+                packagesTab.classList.add('active');
+                activitiesTab.classList.remove('active');
+                packagesView.style.display = 'block';
+                activitiesView.style.display = 'none';
+                difficultyFilters.classList.add('active');
+                categoryFilters.classList.remove('active');
+            } else {
+                activitiesTab.classList.add('active');
+                packagesTab.classList.remove('active');
+                activitiesView.style.display = 'block';
+                packagesView.style.display = 'none';
+                categoryFilters.classList.add('active');
+                difficultyFilters.classList.remove('active');
+            }
+        }
+    </script>
+
+</body>
+</html>
+            
+ <footer>
         <p>&copy; 2026 Sparks Website </p>
     </footer>
 </body>
