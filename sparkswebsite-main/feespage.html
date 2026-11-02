@@ -4,155 +4,263 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adventure Escape SA | Fees & Packages</title>
-
+   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
 <header>
-  <nav aria-label="Main navigation">
-    <a href="index.html">
-      <img src="images/logo.jpg" alt="Adventure Escape SA logo" width="105">
-    </a>
-    <p>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="fees.html" aria-current="page">Fees & Packages</a>
-      <a href="contact.html">Contact</a>
-    </p>
-  </nav>
-</header>
+ <!-- Header / Navigation Bar -->
+    <header class="site-header">
+        <div class="logo-container">
+        <div class="logo-circle">
+            <img src="images/adventure escape sa.jpeg" width="300px" height="300px" alt="Adventure Escape SA Logo" class="brand-logo">
+        </div>
+        </div>
+        <br>
+        <nav class="nav-links">
+            <a href="index.html" >HOME</a>
+            <a href="aboutus.html">ABOUT US</a>
+            <a href="packages.html">PACKAGES</a>
+            <a href="feespage.html">FEES</a>
+            <a href="contactus.html">CONTACT US</a>
+            <a href="indivisual.html"> INDIVISUAL</a>
+            <a href="overview.html"> OVERVIEW</a>
+            <a href="FeedBack_Support.html"> FEEDBACK&SUPPORT</a>
+            <a href="booking.html">BOOKINGS</a>
+            <a href="gallery.html">GALLERY</a>
+            
+        </nav>
+    </header>
 
-<main>
-  <section>
-    <p class="eyebrow">Adventure Packages</p>
-    <h1>Choose Your Experience.</h1>
-    <p class="intro">Choose from a selection of exciting outdoor experiences designed for individuals, families, teams and adventure enthusiasts.</p>
-  </section>
+    <body>
 
-  <section class="grid">
-    <article class="package">
-      <h2>Ultimate Adventure Day</h2>
-      <p class="price">R1 500</p>
-      <p>A full-day outdoor adventure featuring multiple exciting activities.</p>
-      <ul>
-        <li>Guided hiking trail</li>
-        <li>Ziplining</li>
-        <li>Kayaking</li>
-        <li>Lunch</li>
-        <li>Safety briefing and equipment</li>
-      </ul>
-    </article>
+  <!-- Fee Calculator Section -->
+    <main class="calculator-page">
+        <div class="container">
+            
+            <div class="page-header">
+                <span class="section-tag">PLAN YOUR TRIP</span>
+                <h1>Fee Calculator</h1>
+            </div>
 
-    <article class="package">
-      <h2>Family Explorer Package</h2>
-      <p class="price">R1 500</p>
-      <p>A fun-filled outdoor experience designed for families.</p>
-      <ul>
-        <li>Nature walk</li>
-        <li>Obstacle course</li>
-        <li>Picnic area</li>
-        <li>Family games</li>
-        <li>Guided wildlife spotting</li>
-      </ul>
-    </article>
+            <!-- EMPTY STATE CONTAINER (Shown when cart is empty) -->
+            <div class="empty-state-card" id="emptyState" style="display: none;">
+                <h2>No items selected yet</h2>
+                <p>Browse packages and activities, then add them to your booking.</p>
+                <a href="packages.html" class="btn-primary">Browse Adventures</a>
+            </div>
 
-    <article class="package">
-      <h2>Mountain Adventure Package</h2>
-      <p class="price">R1 500</p>
-      <p>A guided mountain adventure for outdoor enthusiasts.</p>
-      <ul>
-        <li>Mountain hiking</li>
-        <li>Scenic viewpoints</li>
-        <li>Rock scrambling</li>
-        <li>Safety equipment</li>
-        <li>Professional guide</li>
-      </ul>
-    </article>
+            <!-- POPULATED STATE CONTAINER (Shown when items are selected) -->
+            <div class="calculator-layout" id="populatedState">
+                
+                <!-- Left Column: Selected Items -->
+                <div class="selected-items-column">
+                    <h2>Selected Items</h2>
+                    
+                    <div id="itemsList">
+                        <!-- Sample Item Card -->
+                        <div class="selected-item-card">
+                            <img src="images/a lady ziplining.jpg" alt="Ziplining">
+                            <div class="item-details">
+                                <span class="item-badge">Indivisual activity</span>
+                                <h3>Ziplining</h3>    
+                            </div>
+                            <div class="item-pricing">
+                                <span class="item-price">R750.00</span>
+                                <span class="item-per">per person</span>
+                            </div>
+                        </div>
+                    </div>
 
-    <article class="package">
-      <h2>Corporate Team Challenge</h2>
-      <p class="price">R1 500</p>
-      <p>Team-building activities designed for businesses and organisations.</p>
-      <ul>
-        <li>Team obstacle course</li>
-        <li>Orienteering challenge</li>
-        <li>Raft-building activity</li>
-        <li>Leadership exercises</li>
-        <li>Team awards</li>
-      </ul>
-    </article>
+                    <div id="itemsList">
+                        <!-- Sample Item Card -->
+                        <div class="selected-item-card">
+                            <img src="images/kayaking.jpg" alt="Kayaking">
+                            <div class="item-details">
+                                <span class="item-badge">Indivisual activity</span>
+                                <h3>kayaking</h3>              
+                            </div>
+                            <div class="item-pricing">
+                                <span class="item-price">R750.00</span>
+                                <span class="item-per">per person</span>
+                            </div>
+                        </div>
+                    </div>
 
-    <article class="package">
-      <h2>Ziplining Adventure</h2>
-      <p class="price">R750</p>
-      <p>Experience breathtaking views while ziplining through the forest.</p>
-      <ul>
-        <li>Safety briefing</li>
-        <li>Equipment hire</li>
-        <li>Professional instructors</li>
-      </ul>
-    </article>
+                    <div id="itemsList">
+                        <!-- Sample Item Card -->
+                        <div class="selected-item-card">
+                            <img src="images/rock climbing.avif" alt="Rock Climbing">
+                            <div class="item-details">
+                                <span class="item-badge">Individual activity</span>
+                                <h3>Rock Climbing</h3>
+                                </div>
+                            <div class="item-pricing">
+                                <span class="item-price">R750.00</span>
+                                <span class="item-per">per person</span>
+                            </div>
+                        </div>
+                    </div>
 
-    <article class="package">
-      <h2>Kayaking Experience</h2>
-      <p class="price">R750</p>
-      <p>Paddle through scenic rivers and lakes.</p>
-      <ul>
-        <li>Kayak and paddle</li>
-        <li>Safety equipment</li>
-        <li>Guided route</li>
-      </ul>
-    </article>
+                    <a href="packages.html" class="btn-add-more">+ Add more activities</a>
+                </div>
 
-    <article class="package">
-      <h2>Rock Climbing Session</h2>
-      <p class="price">R750</p>
-      <p>Learn climbing techniques on natural rock faces.</p>
-      <ul>
-        <li>Climbing equipment</li>
-        <li>Safety instruction</li>
-        <li>Professional guide</li>
-      </ul>
-    </article>
-  </section>
+                <!-- Right Column: Cost Summary Sidebar -->
+                <div class="cost-summary-card">
+                    <h2>Cost Summary</h2>
 
-  <section>
-    <p class="eyebrow">Calculate Your Fees</p>
-    <h2>Build Your Own Adventure</h2>
-    <form id="fee-form">
-      <label><input type="checkbox" name="fee" value="1500"> Ultimate Adventure Day — R1 500</label>
-      <label><input type="checkbox" name="fee" value="1500"> Family Explorer Package — R1 500</label>
-      <label><input type="checkbox" name="fee" value="1500"> Mountain Adventure Package — R1 500</label>
-      <label><input type="checkbox" name="fee" value="1500"> Corporate Team Challenge — R1 500</label>
-      <label><input type="checkbox" name="fee" value="750"> Ziplining Adventure — R750</label>
-      <label><input type="checkbox" name="fee" value="750"> Kayaking Experience — R750</label>
-      <label><input type="checkbox" name="fee" value="750"> Rock Climbing Session — R750</label>
-      <p class="total" id="total">Estimated total: R0</p>
-    </form>
-  </section>
-</main>
+                    <!-- Group Size Counter -->
+                    <div class="summary-row-control">
+                        <span class="control-label">GROUP SIZE</span>
+                        <div class="counter-box">
+                            <button onclick="updateGroupSize(-1)">−</button>
+                            <span id="groupSizeCount">1</span>
+                            <button onclick="updateGroupSize(1)">+</button>
+                        </div>
+                        <span class="control-sublabel">person</span>
+                    </div>
+
+                    <!-- Add-ons Checkboxes -->
+                    <div class="add-ons-section">
+                        <span class="control-label">ADD-ONS</span>
+                        
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="insuranceCheck" onchange="calculateTotal()" checked>
+                            <span class="checkmark"></span>
+                            <div class="checkbox-text">
+                                <strong>The more the booking the greater the discount</strong>
+                               <li><p>One bookings: no discount</p>
+                                  <p>Two bookings: 5% discount </p>
+                                  <p>Three bookings: 10% discount</p>
+                                  <p>More than 3 bookings: 15% discount</p>
+                                </li> 
+                            </div>
+                        </label>
+                        
+                    </div>
+
+                    <!-- Promo Code Input -->
+                    <div class="promo-section">
+                        <span class="control-label">PROMO CODE</span>
+                        <div class="promo-input-group">
+                            <input type="text" id="promoInput" placeholder="Enter code">
+                            <button onclick="applyPromo()">Apply</button>
+                        </div>
+                        <span class="promo-hint">Try: WILD10</span>
+                    </div>
+
+                    <!-- Live Breakdown Details -->
+                    <div class="breakdown-list">
+                        <div class="breakdown-item">
+                            <span id="breakdownItemCount">2 item × 1</span>
+                            <span id="breakdownSubtotal">R1500.00</span>
+                        </div>
+                        <div class="breakdown-item" id="insuranceRow">
+                            <span>Two bookings: 5% discount</span>
+                            <span id="breakdownInsurance">R1425.00</span>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Total Display -->
+                    <div class="total-section">
+                        <div class="total-header">
+                            <span>TOTAL</span>
+                            <span class="total-per" id="totalPerPerson">R750.00 per person</span>
+                        </div>
+                        <div class="total-amount" id="totalAmount">$3,758</div>
+                    </div>
+
+                    <button class="btn-proceed" <a href="booking.html" class="btn-proceed">Proceed to booking</a></button>
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Calculator Logic Script -->
+    <script>
+        let basePrice = 3480;
+        let groupSize = 1;
+        let isDiscountApplied = false;
+
+        function updateGroupSize(change) {
+            groupSize += change;
+            if (groupSize < 1) groupSize = 1;
+            
+            document.getElementById('groupSizeCount').innerText = groupSize;
+            document.getElementById('transferPersonCount').innerText = groupSize;
+            calculateTotal();
+        }
+
+        function applyPromo() {
+            const code = document.getElementById('promoInput').value.trim().toUpperCase();
+            if (code === 'WILD10') {
+                isDiscountApplied = true;
+                alert('Promo code WILD10 applied successfully! (10% off)');
+                calculateTotal();
+            } else {
+                alert('Invalid code. Try entering WILD10');
+            }
+        }
+
+        function calculateTotal() {
+            let subtotal = basePrice * groupSize;
+            
+            // Item breakdown text
+            document.getElementById('breakdownItemCount').innerText = `1 item × ${groupSize} person${groupSize > 1 ? 's' : ''}`;
+            document.getElementById('breakdownSubtotal').innerText = `$${subtotal.toLocaleString()}`;
+
+            let discountAmount = 0;
+            if (isDiscountApplied) {
+                discountAmount = subtotal * 0.10;
+                document.getElementById('discountRow').style.display = 'flex';
+                document.getElementById('breakdownDiscount').innerText = `-$${discountAmount.toLocaleString()}`;
+                subtotal -= discountAmount;
+            } else {
+                document.getElementById('discountRow').style.display = 'none';
+            }
+
+            let runningTotal = subtotal;
+
+            // Insurance Check
+            const hasInsurance = document.getElementById('insuranceCheck').checked;
+            if (hasInsurance) {
+                let insuranceCost = subtotal * 0.08;
+                document.getElementById('insuranceRow').style.display = 'flex';
+                document.getElementById('breakdownInsurance').innerText = `$${insuranceCost.toLocaleString(undefined, {maximumFractionDigits: 0})}`;
+                runningTotal += insuranceCost;
+            } else {
+                document.getElementById('insuranceRow').style.display = 'none';
+            }
+
+            // Transfer Check
+            const hasTransfer = document.getElementById('transferCheck').checked;
+            if (hasTransfer) {
+                let transferCost = 95 * groupSize;
+                document.getElementById('transferRow').style.display = 'flex';
+                document.getElementById('breakdownTransfer').innerText = `$${transferCost.toLocaleString()}`;
+                runningTotal += transferCost;
+            } else {
+                document.getElementById('transferRow').style.display = 'none';
+            }
+
+            let perPersonTotal = Math.round(runningTotal / groupSize);
+
+            document.getElementById('totalAmount').innerText = `$${Math.round(runningTotal).toLocaleString()}`;
+            document.getElementById('totalPerPerson').innerText = `$${perPersonTotal.toLocaleString()} per person`;
+        }
+
+        function proceedToEnquiry() {
+            alert('Proceeding to inquiry with your selected custom package!');
+        }
+    </script>
+</body>
+</html>
 
 <footer>
   <p><strong>Adventure Escape SA</strong></p>
   <p>All package prices shown in South African Rand (ZAR).</p>
 </footer>
 
-<script>
-const boxes = document.querySelectorAll('input[name="fee"]');
-const total = document.querySelector('#total');
-
-boxes.forEach(function(box) {
-  box.addEventListener('change', function() {
-    let amount = 0;
-    boxes.forEach(function(item) {
-      if (item.checked) {
-        amount += Number(item.value);
-      }
-    });
-    total.textContent = 'Estimated total: R' + amount.toLocaleString('en-ZA');
-  });
-});
-</script>
-
-</body>
-</html>

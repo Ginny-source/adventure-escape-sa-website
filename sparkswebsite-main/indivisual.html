@@ -3,68 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adventure Escape SA | Ziplining Adventure</title>
+  <title>Adventure Escape SA | Indivisual activity</title>
+  <link rel="stylesheet" href="style.css">
  
 </head>
-<body>
 
-<header>
-  <nav aria-label="Main navigation">
-    <p>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="fees.html" aria-current="page">Fees & Packages</a>
-      <a href="contact.html">Contact</a>
-    </p>
-  </nav>
-</header>
+<!-- Header / Navigation Bar -->
+    <header class="site-header">
+        <div class="logo-container">
+        <div class="logo-circle">
+            <img src="images/adventure escape sa.jpeg" width="300px" height="300px" alt="Adventure Escape SA Logo" class="brand-logo">
+        </div>
+        </div>
+        <br>
+        <nav class="nav-links">
+            <a href="index.html" >HOME</a>
+            <a href="aboutus.html">ABOUT US</a>
+            <a href="packages.html">PACKAGES</a>
+            <a href="feespage.html">FEES</a>
+            <a href="contactus.html">CONTACT US</a>
+            <a href="indivisual.html"> INDIVISUAL</a>
+            <a href="overview.html"> OVERVIEW</a>
+           <a href="FeedBack_Support.html"> FEEDBACK&SUPPORT</a>
+            <a href="booking.html">BOOKINGS</a>
+            <a href="gallery.html">GALLERY</a>
+            
+        </nav>
+    </header>
 
-<main>
-  <section>
-    <p class="eyebrow">Individual Package</p>
-    <h1>Ziplining Adventure</h1>
-    <p class="intro">Experience breathtaking views while ziplining through the forest with professional instructors.</p>
-  </section>
+<!-- Individual Activity Section -->
+    <main class="individual-page">
+        <div class="container">
+            
+            <div class="page-top-title">INDIVISUAL ACTIVITIES</div>
 
-  <section class="grid">
-    <article class="card">
-      <h2>Package Details</h2>
-      <p><strong>Price:</strong> R750 per person</p>
-      <p><strong>Duration:</strong> 2 Hours</p>
-      <p><strong>Location:</strong> South Africa</p>
-      <p><strong>Level:</strong> Beginner to Intermediate</p>
-      <ul>
-        <li>Safety briefing</li>
-        <li>Equipment hire included</li>
-        <li>Professional instructors</li>
-        <li>Forest canopy views</li>
-        <li>Photos available</li>
-      </ul>
-    </article>
+            <div class="activity-grid">
+                
+              
+            <!-- Activities View Grid (Default active state matching your screenshot) -->
+            <div class="content-view active" id="activitiesView">
+                <div class="packages-grid">
+                    
+                    <!-- Activity 1:Sky diving -->
+                    <div class="package-card">
+                        <div class="card-image">
+                            <img src="images/a-woman-giving-the-peace-sign-1024x576.jpg" alt="sky diving">
+                        </div>
+                        <div class="card-content">
+                            <span class="location">Western Cape, Adventure escape SA</span>
+                            <h2>Sky Diving</h2>
+                            <p class="description">Tackle world-class class IV-V rapids through pristine glacial river canyons with expert river rescue leads.</p>
+                            <div class="card-footer">
+                                <div class="price-action-group">
+                                    <div class="price"><strong>R750</strong></div>
+                                    <div class="action-buttons">
+                                        <a href="overview.html" class="btn-view">View</a>
+                                        <a href="booking.html" class="btn-add">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <article class="card">
-      <h2>What's Included</h2>
-      <ul>
-        <li>Helmet and harness</li>
-        <li>Safety briefing</li>
-        <li>2x zipline runs</li>
-        <li>Guide assistance</li>
-      </ul>
+                    <!-- Activity 2: Rock Climbing -->
+                    <div class="package-card">
+                        <div class="card-image">
+                            <img src="images/rock climbing.avif" alt="Rock Climbing">
+                           </div>
+                        <div class="card-content">
+                            <span class="location">Western Cape, Adventure escape SA</span>
+                            <h2>Rock Climbing </h2>
+                            <p class="description">Climb iconic limestone cliffs overlooking the beautiful mountains and feeling the breeze.</p>
+                            <div class="card-footer">
+                                <div class="price-action-group">
+                                    <div class="price"><strong>R750</strong></div>
+                                    <div class="action-buttons">
+                                        <a href="overview.html" class="btn-view">View</a>
+                                        <a href="booking.html" class="btn-add">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-      <h2>What to Bring</h2>
-      <ul>
-        <li>Comfortable shoes</li>
-        <li>Sunscreen</li>
-        <li>Water bottle</li>
-      </ul>
-      <a href="contact.html">Book This Adventure</a>
-    </article>
-  </section>
+                    <!-- Activity 3: Kayaking -->
+                    <div class="package-card">
+                        <div class="card-image">
+                            <img src="images/kayaking.jpg" alt="Kayaking">
+                        </div>
+                        <div class="card-content">
+                            <span class="location">Western Cape, Adventure escape SA</span>
+                            <h2>Kayaking</h2>
+                            <p class="description">Soar high above alpine lakes and snow-capped peaks accompanied by a certified tandem pilot.</p>
+                            <div class="card-footer">
+                                <div class="price-action-group">
+                                    <div class="price"><strong>R750</strong></div>
+                                    <div class="action-buttons">
+                                        <a href="overview.html" class="btn-view">View</a>
+                                        <a href="booking.htm" class="btn-add">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
 
-  <section>
-    <a href="fees.html">← Back to All Packages</a>
-  </section>
-</main>
+        </div>
+    </main>
 
 <footer>
   <p><strong>Adventure Escape SA</strong></p>

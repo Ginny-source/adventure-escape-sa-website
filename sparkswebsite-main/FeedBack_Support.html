@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed back and Support - Sparks Website</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+   <!-- Header / Navigation Bar -->
+    <header class="site-header">
+        <div class="logo-container">
+        <div class="logo-circle">
+            <img src="images/adventure escape sa.jpeg" width="300px" height="300px" alt="Adventure Escape SA Logo" class="brand-logo">
+        </div>
+        </div>
+        <br>
+        <nav class="nav-links">
+            <a href="index.html" >HOME</a>
+            <a href="aboutus.html">ABOUT US</a>
+            <a href="packages.html">PACKAGES</a>
+            <a href="feespage.html">FEES</a>
+            <a href="contactus.html">CONTACT US</a>
+            <a href="indivisual.html"> INDIVISUAL</a>
+            <a href="overview.html"> OVERVIEW</a>
+            <a href="FeedBack_Support.html"> FEEDBACK&SUPPORT</a>
+            <a href="booking.html">BOOKINGS</a>
+            <a href="gallery.html">GALLERY</a>
+            
+        </nav>
+    </header>
+    
+    <!--Feedback section-->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSem8nBNdqzvHJgDGve_T3e-KMQSzEkWZArmhFd3jIPRKlxKKw/viewform?embedded=true" width="640" height="957" frameborder="0" marginheight="0" marginwidth="0">Loading…
+        
+    </iframe>
+
+   <!-- Rate Us Section -->
+    <main class="rate-page">
+        <div class="container">
+            <h1 class="page-main-title">Rate Us</h1>
+
+            <div class="rate-grid">
+                
+                <!-- Left Column: Feedback Form -->
+                <div class="rate-form-side">
+                    <h2>PLEASE RATE US!</h2>
+                    <p class="rate-subtitle">Every feedback matter to us, tell us how was your recent experience at our packages and activities</p>
+
+                    <div class="rating-question">
+                        <h3>HOW WAS THE EXPERIECE?</h3>
+                        <div class="stars">
+                            <span class="star active">★</span>
+                            <span class="star active">★</span>
+                            <span class="star active">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+
+                    <div class="comments-section">
+                        <h3>COMMENTS (Optional)</h3>
+                        <div class="comment-box-wrapper">
+                            <textarea placeholder="Write your comment here" maxlength="200" oninput="updateCount(this)"></textarea>
+                            <span class="char-count" id="charCount">0/200</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-submit" onclick="alert('Thank you for your feedback!')">Submit Review</button>
+                </div>
+
+                <!-- Right Column: Images Grid -->
+                <div class="rate-images-side">
+                    <div class="image-card">
+                        <img src="images/zipline (2).avif" alt="Zip line adventure">
+                    </div>
+                    <div class="image-card vertical">
+                        <img src="images/team 2.avif" alt="Guides in forest">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Simple character count script -->
+    <script>
+        function updateCount(textarea) {
+            const count = textarea.value.length;
+            document.getElementById('charCount').innerText = `${count}/200`;
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2026 Sparks Website</p>
+    </footer>
+</body>
+</html>

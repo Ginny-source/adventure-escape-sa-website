@@ -4,71 +4,113 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adventure Escape SA | Contact</title>
+  <link rel="stylesheet" href="style.css">
   
 </head>
 <body>
-
-<header>
-  <nav aria-label="Main navigation">
-    <a href="index.html">
-      <img src="images/logo.jpg" alt="Adventure Escape SA logo" width="105">
-    </a>
-    <p>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="fees.html">Fees & Packages</a>
-      <a href="contact.html" aria-current="page">Contact</a>
-    </p>
-  </nav>
-</header>
+<!-- Header / Navigation Bar -->
+    <header class="site-header">
+        <div class="logo-container">
+        <div class="logo-circle">
+            <img src="images/adventure escape sa.jpeg" width="300px" height="300px" alt="Adventure Escape SA Logo" class="brand-logo">
+        </div>
+        </div>
+        <br>
+        <nav class="nav-links">
+            <a href="index.html" class="active">HOME</a>
+            <a href="aboutus.html">ABOUT US</a>
+            <a href="packages.html">PACKAGES</a>
+            <a href="feespage.html">FEES</a>
+            <a href="contactus.html">CONTACT US</a>
+            <a href="indivisual.html"> INDIVISUAL</a>
+            <a href="overview.html"> OVERVIEW</a>
+            <a href="FeedBack_Support.html"> FEEDBACK&SUPPORT</a>
+            <a href="booking.html">BOOKINGS</a>
+            <a href="gallery.html">GALLERY</a>
+          
+        </nav>
+    </header>
 
 <main>
-  <section>
-    <p class="eyebrow">Get In Touch</p>
-    <h1>Let's plan your next adventure.</h1>
-    <p class="intro">Have a question about a package, fees or availability? Send us a message and our team can help you choose an experience.</p>
+  <!-- Contact Section -->
+    <main class="contact-page">
+        <div class="container">
+            
+            <div class="contact-grid">
+                
+                <!-- Left Column: Intro & Details -->
+                <div class="contact-info-side">
+                    <span class="section-tag">GET IN TOUCH</span>
+                    <h1>Contact Us</h1>
+                    <p class="intro-text">We'd love to hear from you</p>
+                    <p class="description">Whether you're planning a solo expedition or a corporate team challenge, our adventure specialists are ready to help you build the perfect trip. We typically respond within one business day.</p>
 
-    <section class="grid">
-      <article class="card">
-        <h2>Contact Details</h2>
-        <p><strong>Email:</strong> info@adventureescapesa.co.za</p>
-        <p><strong>Phone:</strong> +27 00 000 0000</p>
-        <p><strong>Location:</strong> South Africa</p>
-        <p><strong>Hours:</strong> Monday–Friday, 08:00–17:00</p>
-      </article>
+                    <div class="info-blocks">
+                        <div class="info-item">
+                            <span class="info-label">HEADQUARTERS</span>
+                            <span class="info-value">12 Expedition Way, Cape Town, 8001</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">EMAIL</span>
+                            <span class="info-value">hello@apexwild.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">PHONE</span>
+                            <span class="info-value">+1 800 APEX WILD</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">HOURS</span>
+                            <span class="info-value">Mon–Fri 08:00–18:00 SAST</span>
+                        </div>
+                    </div>
+                </div>
 
-      <form action="#" method="post">
-        <label for="name">Full Name</label>
-        <input id="name" name="name" type="text" autocomplete="name" required>
+                <!-- Right Column: Interactive Form Box -->
+                <div class="contact-form-card">
+                    <form onsubmit="event.preventDefault(); alert('Enquiry sent successfully!');">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>FULL NAME *</label>
+                                <input type="text" placeholder="Jordan Müller" required>
+                            </div>
+                            <div class="form-group">
+                                <label>EMAIL *</label>
+                                <input type="email" placeholder="jordan@example.com" required>
+                            </div>
+                        </div>
 
-        <label for="email">Email Address</label>
-        <input id="email" name="email" type="email" autocomplete="email" required>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>PHONE</label>
+                                <input type="tel" placeholder="+1 555 000 0000">
+                            </div>
+                            <div class="form-group">
+                                <label>I'M INTERESTED IN</label>
+                                <select>
+                                    <option>Multi-day Packages</option>
+                                    <option>Individual Activities</option>
+                                    <option>Custom Expedition</option>
+                                    <option>Corporate / Group</option>
+                                </select>
+                            </div>
+                        </div>
 
-        <label for="package">Package</label>
-        <select id="package" name="package">
-          <option>Choose a package</option>
-          <option>Ultimate Adventure Day</option>
-          <option>Family Explorer Package</option>
-          <option>Mountain Adventure Package</option>
-          <option>Corporate Team Challenge</option>
-          <option>Ziplining Adventure</option>
-          <option>Kayaking Experience</option>
-          <option>Rock Climbing Session</option>
-        </select>
+                        <div class="form-group full-width">
+                            <label>MESSAGE *</label>
+                            <textarea rows="5" placeholder="Tell us about your adventure goals, preferred dates, group size, and any special requirements..." required></textarea>
+                        </div>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Tell us what adventure you have in mind..." required></textarea>
+                        <button type="submit" class="btn-submit">Send Enquiry</button>
 
-        <button type="submit">Send Enquiry</button>
-      </form>
-    </section>
+                    </form>
+                </div>
 
-    <p class="notice">
-      <strong>School Project Note:</strong> This contact form is a front-end demonstration. 
-      A real form service or back-end can be connected if submitted messages need to be stored or emailed.
-    </p>
-  </section>
-</main>
+            </div>
+
+        </div>
+    </main>
+
 
 <footer>
   <p><strong>Adventure Escape SA</strong></p>
