@@ -4,14 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Adventure Escape SA | Contact</title>
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+   
 
 </head>
 
@@ -123,46 +119,116 @@
 
 
                 <!-- RIGHT COLUMN: FORM -->
-                 <form>
-                <div class="contact-form-side">
+              <section class="contact-container">
 
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdUngRctkyBzKsNSdmsmE0QG1xu0tYz-wKdScTsievbBTiopg/viewform?embedded=true" width="700" height="957" frameborder="2" marginheight="25" marginwidth="25">Loading…</iframe>
+        <form id="contactForm">
 
-                        <!-- SUBMIT BUTTON -->
-                        <button type="submit">
-                            Submit
-                        </button>
+            <!-- Name -->
+            <div class="form-group">
 
-                    </form>
+                <label for="firstName">Name</label>
 
-                </div>
+                <input
+                    type="text"
+                    id="firstName"
+                    placeholder="Enter your name"
+                >
+
+                <small class="error" id="nameError"></small>
 
             </div>
 
-        </div>
+            <!-- Surname -->
+            <div class="form-group">
 
-    </main>
+                <label for="surname">Surname</label>
+
+                <input
+                    type="text"
+                    id="surname"
+                    placeholder="Enter your surname"
+                >
+
+                <small class="error" id="surnameError"></small>
+
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+
+                <label for="phone">Phone Number</label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                >
+
+                <small class="error" id="phoneError"></small>
+
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+
+                <label for="email">Email Address</label>
+
+                <input
+                    type="text"
+                    id="email"
+                    placeholder="Enter your email address"
+                >
+
+                <small class="error" id="emailError"></small>
+
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+
+                <label for="message">Message</label>
+
+                <textarea
+                    id="message"
+                    placeholder="Enter your message"
+                    rows="5"
+                ></textarea>
+
+                <small class="error" id="messageError"></small>
+
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+
+        </form>
+
+    </section>
+</section>
+
+            </div> <!-- Close contact-grid -->
+
+        </div> <!-- Close container -->
+
+    </main> <!-- Close contact-page -->
 
 
-    <!-- SUCCESS POPUP -->
-    <div class="popup" id="successPopup">
+    <!-- Success Popup -->
+    <div id="successPopup" class="popup">
 
-        <div class="popup-card">
+        <div class="popup-content">
 
-            <h2>Success!</h2>
+            <h2>Thank You!</h2>
 
             <p id="feedbackMessage">
-                Your form has been submitted successfully.
+                Your message has been submitted successfully!
             </p>
 
-            <button type="button" id="closePopup">
-                Close
-            </button>
+            <button type="button" id="closePopup">OK</button>
 
         </div>
 
     </div>
-
 
     <!-- FOOTER SECTION -->
 <footer class="footer">

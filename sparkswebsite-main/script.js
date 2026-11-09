@@ -499,10 +499,237 @@ function setupFeedbackValidation() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  setupPackageSelection();
-  setupActivitySelection();
-  setupFeeCalculator();
-  setupBookingForm();
-  renderPackageOverview();
-  setupFeedbackValidation();
+
+    setupPackageSelection();
+
+    setupActivitySelection();
+
+    setupFeeCalculator();
+
+    setupBookingForm();
+
+    renderPackageOverview();
+
+    setupFeedbackValidation();
+
+    setupContactValidation();
+
 });
+
+
+// ======================================
+// CONTACT US FORM VALIDATION
+// ======================================
+
+function setupContactValidation() {
+
+    const form = document.getElementById("contactForm");
+
+    // Stop if this is not the Contact Us page
+    if (!form) return;
+
+    const firstName = document.getElementById("firstName");
+    const surname = document.getElementById("surname");
+    const phone = document.getElementById("phone");
+    const email = document.getElementById("email");
+    const message = document.getElementById("message");
+
+    const successPopup = document.getElementById("successPopup");
+    const feedbackMessage = document.getElementById("feedbackMessage");
+    const closePopup = document.getElementById("closePopup");
+
+
+    // DISPLAY ERROR MESSAGE
+    function showError(input, errorId, errorMessage) {
+
+        const errorElement = document.getElementById(errorId);
+
+        if (errorElement) {
+            errorElement.textContent = errorMessage;
+        }
+
+        input.style.border = "2px solid red";
+    }
+
+
+    // CLEAR ERROR MESSAGE
+    function clearError(input, errorId) {
+
+        const errorElement = document.getElementById(errorId);
+
+        if (errorElement) {
+            errorElement.textContent = "";
+        }
+
+        input.style.border = "1px solid green";
+    }
+
+
+    // VALIDATE FIRST NAME
+    function validateName() {
+
+        const value = firstName.value.trim();
+
+        if (value === "") {
+            showError(firstName, "nameError", "Empty field.");
+            return false;
+        }
+
+        if (!/^[a-zA-Z\s]+$/.test(value)) {
+            showError(firstName, "nameError", "Name must contain letters only.");
+            return false;
+        }
+
+        clearError(firstName, "nameError");
+        return true;
+    }
+
+
+    // VALIDATE SURNAME
+    function validateSurname() {
+
+        const value = surname.value.trim();
+
+        if (value === "") {
+            showError(surname, "surnameError", "Empty field.");
+            return false;
+        }
+
+        if (!/^[a-zA-Z\s]+$/.test(value)) {
+            showError(surname, "surnameError", "Surname must contain letters only.");
+            return false;
+        }
+
+        clearError(surname, "surnameError");
+        return true;
+    }
+
+
+    // VALIDATE PHONE NUMBER
+    function validatePhone() {
+
+        const value = phone.value.trim();
+
+        if (value === "") {
+            showError(phone, "phoneError", "Empty field.");
+            return false;
+        }
+
+        if (!/^[0-9]+$/.test(value)) {
+            showError(phone, "phoneError", "Phone number must contain numbers only.");
+            return false;
+        }
+
+        if (value.length < 10 || value.length > 15) {
+            showError(phone, "phoneError", "Phone number must contain 10 to 15 digits.");
+            return false;
+        }
+
+        clearError(phone, "phoneError");
+        return true;
+    }
+
+
+    // VALIDATE EMAIL
+    function validateEmail() {
+
+        const value = email.value.trim();
+
+        if (value === "") {
+            showError(email, "emailError", "Empty field.");
+            return false;
+        }
+
+        const emailPattern =
+            /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if (!emailPattern.test(value)) {
+            showError(email, "emailError", "Please enter a valid email address.");
+            return false;
+        }
+
+        clearError(email, "emailError");
+        return true;
+    }
+
+
+    // VALIDATE MESSAGE
+    function validateMessage() {
+
+        const value = message.value.trim();
+
+        if (value === "") {
+            showError(message, "messageError", "Empty field.");
+            return false;
+        }
+
+        clearError(message, "messageError");
+        return true;
+    }
+
+
+    // CHECK ALL FIELDS WHEN SUBMITTING
+    form.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const nameValid = validateName();
+        const surnameValid = validateSurname();
+        const phoneValid = validatePhone();
+        const emailValid = validateEmail();
+        const messageValid = validateMessage();
+
+        if (
+            !nameValid ||
+            !surnameValid ||
+            !phoneValid ||
+            !emailValid ||
+            !messageValid
+        ) {
+            return;
+        }
+
+
+        // ALL FIELDS ARE VALID
+        if (feedbackMessage) {
+            feedbackMessage.textContent =
+                `Thank you, ${firstName.value.trim()}! Your message has been submitted successfully.`;
+        }
+
+        if (successPopup) {
+            successPopup.style.display = "flex";
+        }
+
+        form.reset();
+
+        // Reset input borders
+        form.querySelectorAll("input, textarea").forEach(input => {
+            input.style.border = "1px solid #ccc";
+        });
+
+        // Clear error messages
+        form.querySelectorAll(".error-message").forEach(error => {
+            error.textContent = "";
+        });
+
+    });
+
+
+    // REMOVE ERRORS WHILE TYPING
+    firstName.addEventListener("input", validateName);
+    surname.addEventListener("input", validateSurname);
+    phone.addEventListener("input", validatePhone);
+    email.addEventListener("input", validateEmail);
+    message.addEventListener("input", validateMessage);
+
+
+    // CLOSE SUCCESS POPUP
+    if (closePopup && successPopup) {
+
+        closePopup.addEventListener("click", function() {
+            successPopup.style.display = "none";
+        });
+
+    }
+
+}
