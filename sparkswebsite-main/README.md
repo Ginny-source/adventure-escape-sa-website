@@ -4,8 +4,8 @@
 This is a tourism and outdoor activities website developed for adventurous experiences. 
 The website showcases hiking, zipline, climbing and buffet services with 12 responsive HTML pages.
 
-**Live Site:** https://moengapp.github.io/sparkswebsite/
-**Repository:** https://github.com/moengapp/sparkswebsite
+**Live Site:** 
+**Repository:** 
 
 ## Website Structure (12 Pages)
 1. index.html - Home
