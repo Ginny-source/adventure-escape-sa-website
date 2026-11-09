@@ -5,8 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Adventure Escape SA Gallery">
     <title>Adventure Escape SA - Gallery</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
+<style>
+    :root {
+    --bg-color: #F7F5F0;
+    --text-dark: #2C2625;
+    --text-muted: #6B6361;
+    --accent-color: #2C2625;
+    --border-color: #E6E2D8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 40px 20px;
+    -webkit-font-smoothing: antialiased;
+}
+</style>
 <body>
 <!-- Header / Navigation Bar -->
     <header class="site-header">
@@ -29,15 +55,153 @@
             <a href="gallery.html">GALLERY</a>
         </nav>
     </header>
-<main>
-    <h1>Our Gallery</h1>
-    <p>Adventure moments in Drakensberg</p>
 
-    <img src="images/a-woman-giving-the-peace-sign-to-the-camera-while-hiking-7625085_11zon.JPG" alt="Hiking" width="300">
-    <img src="images/zipline-ziprider-1-1920x700.avif" alt="Zipline" width="300">
-    <img src="images/climbing_2657588b_(1).webp" alt="Climbing" width="300">
-    <img src="images/istockphoto-904172104-612x612.jpg" alt="Group" width="300">
-</main>
+    <div class="container">
+        
+        <!-- Gallery Features -->
+        <section class="featured-Gallery">
+            <div class="featured-content">
+                <div class="section-tag">Gallery</div>
+                <h1>All <br> Available Activities</h1>
+                <p>Every Adventure Tells a Story. Explore Our Moments!.</p>
+                <a href="indivisual.html" class="btn">Explore activities  &rarr;</a>
+            </div>
+            <div class="featured-image-wrapper">
+                <img src="images/WhatsApp Image 2026-10-28 at 13.32.00.jpeg" alt="All the activities combined">
+            </div>
+        </section>
 
+        <!-- Upcoming Activities  -->
+        <section class="upcoming-Activities">
+            <div class="upcoming-content">
+                <div class="section-tag">Upcoming Activities</div>
+                <h2>See<br>All<br>Activities</h2>
+                <p>Capture the Thrill, Remember the Adventure!.</p>
+                <a href="aboutus.html" class="text-link">Learn More &rarr;</a>
+            </div>
+            <div class="upcoming-image-wrapper">
+                <img src="images/about us.avif" alt="Our team showing off all the achivements">
+            </div>
+        </section>
+
+        <!-- Featured Activities -->
+        <section class="activity-section">
+            <div class="activity-header">
+                <div class="section-tag" style="margin-bottom: 0;">Featured Activities</div>
+                <a href="indivisual.html" class="text-link" style="font-size: 0.85rem;">View All Activities &rarr;</a>
+            </div>
+            
+            <div class="activity-grid">
+                <!-- Activity 1 -->
+                <div class="activity-card">
+                    <div class="activity-img-container">
+                        <img src="images/a lady ziplining.jpg" alt="Ziplining">
+                    </div>
+                    <div class="activity-info">
+                        <h3>Ziplining</h3>
+                        <span>Embrace the Adventure!</span>
+                    </div>
+                </div>
+
+                <!-- Activity 2 -->
+                <div class="activity-card">
+                    <div class="activity-img-container">
+                        <img src="images/WhatsApp Image 2026-10-28 at 13.32.05.jpeg" alt="Kayaking">
+                    </div>
+                    <div class="activity-info">
+                        <h3>Kayaking</h3>
+                        <span>Embrace the Waves</span>
+                    </div>
+                </div>
+
+                <!-- Activity 3 -->
+                <div class="activity-card">
+                    <div class="activity-img-container">
+                        <img src="images/rock climbing.avif" alt="Rock Climbing">
+                    </div>
+                    <div class="activity-info">
+                        <h3>Rock climbing</h3>
+                        <span>Climb Beyond the Ordinary!</span>
+                    </div>
+                </div>
+
+                <!-- Activity 4-->
+                <div class="activity-card">
+                    <div class="activity-img-container">
+                        <img src="images/ocean dive.jpg" alt="Ocean dive">
+                    </div>
+                    <div class="artist-info">
+                        <h3>Ocean Dive</h3>
+                        <span>Dive Into the Deep</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+      <!-- FOOTER SECTION -->
+<footer class="footer">
+
+    <!-- Logo -->
+    <div class="footer-logo">
+        <h2>ADVENTURE </h2>
+        <h3>ESCAPE</h3>
+    </div>
+
+    <div class="footer-container">
+
+        <!-- FAQs -->
+        <div class="footer-column">
+            <h3>FAQs</h3>
+            <ul>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="FeedBack_Support.html">Feedback</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="booking.html">Bookings</a></li>
+            </ul>
+        </div>
+
+        <!-- About -->
+        <div class="footer-column">
+            <h3>About</h3>
+            <ul>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="indivisual.html">Indivisual Activities</a></li>
+                <li><a href="index.html">Home page</a></li>
+                <li><a href="contactus.html">Location</a></li>
+              
+            </ul>
+        </div>
+
+        <!-- Newsletter and Social Media -->
+        <div class="footer-column newsletter">
+           
+           
+           
+           <br> <h3>Join Us</h3>
+           
+
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>© 2024, Adventure escape</p>
+    </div>
+
+</footer>
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </body>
 </html>

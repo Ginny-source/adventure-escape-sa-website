@@ -6,6 +6,7 @@
     <meta name="description" content="Adventure Escape SA Booking">
     <title>Adventure Escape SA - Booking</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
    
 </head>
 <body>
@@ -32,35 +33,118 @@
         </nav>
     </header>
 
-<main>
-    <h1>Book Your Adventure</h1>
-    <form>
-        <label>Full Name:</label>
-        <input type="text" required><br><br>
+<main class="booking-page">
+    <div class="booking-page-inner">
+      <h1>Book Your Adventure</h1>
+      <p class="booking-intro">Check your selections and enter your details to prepare your booking request.</p>
 
-        <label>Phone:</label>
-        <input type="tel" required><br><br>
+      <section class="booking-summary-card" id="bookingSummary">
+        <h2>Your selected adventure</h2>
+        <div id="bookingItemsSummary"></div>
+        <div class="booking-summary-total">
+          <span>Group size: <strong id="bookingGroupSize">1</strong></span>
+          <span>Total: <strong id="bookingTotal">R0.00</strong></span>
+        </div>
+        <a href="feespage.html" class="btn-add-more">Edit selections and fees</a>
+      </section>
 
-        <label>Email:</label>
-        <input type="email" required><br><br>
+      <div class="empty-state-card" id="bookingEmptyState" hidden>
+        <h2>No adventure selected</h2>
+        <p>Please choose a package or activity and calculate your fees first.</p>
+        <a href="packages.html" class="btn-primary">Choose a package</a>
+      </div>
 
-        <label>Package:</label>
-        <select>
-            <option>Hiking - R350</option>
-            <option>Zipline - R550</option>
-            <option>Climbing - R450</option>
-            <option>Family Combo - R750</option>
-        </select><br><br>
+      <form id="bookingForm" class="booking-form" novalidate>
+        <h2>Booking Details</h2>
 
-        <label>Date:</label>
-        <input type="date" required><br><br>
+        <label for="bookingName">Full Name</label>
+        <input type="text" id="bookingName" name="bookingName" required minlength="2" autocomplete="name">
 
-        <label>People:</label>
-        <input type="number" min="1"><br><br>
+        <label for="bookingPhone">Phone Number</label>
+        <input type="tel" id="bookingPhone" name="bookingPhone" required inputmode="tel" placeholder="e.g. 0821234567" autocomplete="tel">
+        <small class="field-help">Enter 10–15 digits. You may include a leading +.</small>
 
-        <button type="submit">Confirm Booking</button>
-    </form>
-</main>
+        <label for="bookingEmail">Email Address</label>
+        <input type="email" id="bookingEmail" name="bookingEmail" required autocomplete="email">
+
+        <label for="bookingDate">Preferred Date</label>
+        <input type="date" id="bookingDate" name="bookingDate" required>
+
+        <label for="bookingPeople">Number of People</label>
+        <input type="number" id="bookingPeople" name="bookingPeople" min="1" max="100" value="1" required>
+
+        <label for="bookingNotes">Additional Notes (optional)</label>
+        <textarea id="bookingNotes" name="bookingNotes" rows="4" placeholder="Tell us if you have any additional requests."></textarea>
+
+        <button type="submit" class="btn-submit" id="confirmBookingBtn">Confirm Booking Request</button>
+        <p id="bookingFormMessage" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+      <p class="booking-disclaimer">This website demo prepares and confirms the request on this page. It does not send the booking to a server or process payment.</p>
+    </div>
+  </main>
+
+    <!-- FOOTER SECTION -->
+<footer class="footer">
+
+    <!-- Logo -->
+    <div class="footer-logo">
+        <h2>ADVENTURE </h2>
+        <h3>ESCAPE</h3>
+    </div>
+
+    <div class="footer-container">
+
+        <!-- FAQs -->
+        <div class="footer-column">
+            <h3>FAQs</h3>
+            <ul>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="FeedBack_Support.html">Feedback</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="booking.html">Bookings</a></li>
+            </ul>
+        </div>
+
+        <!-- About -->
+        <div class="footer-column">
+            <h3>About</h3>
+            <ul>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="indivisual.html">Indivisual Activities</a></li>
+                <li><a href="index.html">Home page</a></li>
+                <li><a href="contactus.html">Location</a></li>
+              
+            </ul>
+        </div>
+
+       <!-- Newsletter and Social Media -->
+        <div class="footer-column newsletter">
+           
+           
+           
+           <br> <h3>Join Us</h3>
+           
+
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+    </div>
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>© 2024, Adventure escape</p>
+    </div>
+
+</footer>
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </body>
 </html>

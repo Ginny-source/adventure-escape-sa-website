@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adventure Escape SA | Indivisual activity</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
  
 </head>
 
@@ -31,90 +32,137 @@
         </nav>
     </header>
 
-<!-- Individual Activity Section -->
-    <main class="individual-page">
-        <div class="container">
-            
-            <div class="page-top-title">INDIVISUAL ACTIVITIES</div>
+ <main class="individual-page">
+    <div class="container">
+      <div class="page-top-title">INDIVIDUAL ACTIVITIES</div>
+      <p class="selection-note" id="activitySelectionNote" aria-live="polite">Add any activities you would like. Each activity costs R750 per person.</p>
 
-            <div class="activity-grid">
-                
-              
-            <!-- Activities View Grid (Default active state matching your screenshot) -->
-            <div class="content-view active" id="activitiesView">
-                <div class="packages-grid">
-                    
-                    <!-- Activity 1:Sky diving -->
-                    <div class="package-card">
-                        <div class="card-image">
-                            <img src="images/a-woman-giving-the-peace-sign-1024x576.jpg" alt="sky diving">
-                        </div>
-                        <div class="card-content">
-                            <span class="location">Western Cape, Adventure escape SA</span>
-                            <h2>Sky Diving</h2>
-                            <p class="description">Tackle world-class class IV-V rapids through pristine glacial river canyons with expert river rescue leads.</p>
-                            <div class="card-footer">
-                                <div class="price-action-group">
-                                    <div class="price"><strong>R750</strong></div>
-                                    <div class="action-buttons">
-                                        <a href="overview.html" class="btn-view">View</a>
-                                        <a href="booking.html" class="btn-add">+</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Activity 2: Rock Climbing -->
-                    <div class="package-card">
-                        <div class="card-image">
-                            <img src="images/rock climbing.avif" alt="Rock Climbing">
-                           </div>
-                        <div class="card-content">
-                            <span class="location">Western Cape, Adventure escape SA</span>
-                            <h2>Rock Climbing </h2>
-                            <p class="description">Climb iconic limestone cliffs overlooking the beautiful mountains and feeling the breeze.</p>
-                            <div class="card-footer">
-                                <div class="price-action-group">
-                                    <div class="price"><strong>R750</strong></div>
-                                    <div class="action-buttons">
-                                        <a href="overview.html" class="btn-view">View</a>
-                                        <a href="booking.html" class="btn-add">+</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Activity 3: Kayaking -->
-                    <div class="package-card">
-                        <div class="card-image">
-                            <img src="images/kayaking.jpg" alt="Kayaking">
-                        </div>
-                        <div class="card-content">
-                            <span class="location">Western Cape, Adventure escape SA</span>
-                            <h2>Kayaking</h2>
-                            <p class="description">Soar high above alpine lakes and snow-capped peaks accompanied by a certified tandem pilot.</p>
-                            <div class="card-footer">
-                                <div class="price-action-group">
-                                    <div class="price"><strong>R750</strong></div>
-                                    <div class="action-buttons">
-                                        <a href="overview.html" class="btn-view">View</a>
-                                        <a href="booking.htm" class="btn-add">+</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="packages-grid">
+        <article class="package-card">
+          <div class="card-image">
+            <img src="images/a-woman-giving-the-peace-sign-1024x576.jpg" alt="Sky diving">
+          </div>
+          <div class="card-content">
+            <span class="location">Western Cape, Adventure Escape SA</span>
+            <h2>Sky Diving</h2>
+            <p class="description">Experience the thrill of sky diving with a qualified adventure team.</p>
+            <div class="card-footer">
+              <div class="price"><strong>R750</strong> <span>per person</span></div>
+              <div class="action-buttons">
+                <a href="overview.html" class="btn-view">View</a>
+                <button type="button" class="btn-add" data-add-activity data-id="sky-diving" data-name="Sky Diving" data-price="750" data-image="images/a-woman-giving-the-peace-sign-1024x576.jpg" aria-label="Add Sky Diving">+</button>
+              </div>
             </div>
+          </div>
+        </article>
 
+        <article class="package-card">
+          <div class="card-image">
+            <img src="images/rock climbing.avif" alt="Rock Climbing">
+          </div>
+          <div class="card-content">
+            <span class="location">Western Cape, Adventure Escape SA</span>
+            <h2>Rock Climbing</h2>
+            <p class="description">Climb beautiful rock faces and enjoy the scenery with an outdoor adventure.</p>
+            <div class="card-footer">
+              <div class="price"><strong>R750</strong> <span>per person</span></div>
+              <div class="action-buttons">
+                <a href="overview.html" class="btn-view">View</a>
+                <button type="button" class="btn-add" data-add-activity data-id="rock-climbing" data-name="Rock Climbing" data-price="750" data-image="images/rock climbing.avif" aria-label="Add Rock Climbing">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="package-card">
+          <div class="card-image">
+            <img src="images/kayaking.jpg" alt="Kayaking">
+          </div>
+          <div class="card-content">
+            <span class="location">Western Cape, Adventure Escape SA</span>
+            <h2>Kayaking</h2>
+            <p class="description">Enjoy a kayaking experience and explore the water at your own pace.</p>
+            <div class="card-footer">
+              <div class="price"><strong>R750</strong> <span>per person</span></div>
+              <div class="action-buttons">
+                <a href="overview.html" class="btn-view">View</a>
+                <button type="button" class="btn-add" data-add-activity data-id="kayaking" data-name="Kayaking" data-price="750" data-image="images/kayaking.jpg" aria-label="Add Kayaking">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="page-action-row">
+        <a class="btn-secondary" href="packages.html">Back to packages</a>
+        <a class="btn-primary" href="feespage.html">View fees and continue</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER SECTION -->
+<footer class="footer">
+
+    <!-- Logo -->
+    <div class="footer-logo">
+        <h2>ADVENTURE </h2>
+        <h3>ESCAPE</h3>
+    </div>
+
+    <div class="footer-container">
+
+        <!-- FAQs -->
+        <div class="footer-column">
+            <h3>FAQs</h3>
+            <ul>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="FeedBack_Support.html">Feedback</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="booking.html">Bookings</a></li>
+            </ul>
         </div>
-    </main>
 
-<footer>
-  <p><strong>Adventure Escape SA</strong></p>
-  <p>Explore more. Experience more. Escape the ordinary.</p>
+        <!-- About -->
+        <div class="footer-column">
+            <h3>About</h3>
+            <ul>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="indivisual.html">Indivisual Activities</a></li>
+                <li><a href="index.html">Home page</a></li>
+                <li><a href="contactus.html">Location</a></li>
+              
+            </ul>
+        </div>
+
+       <!-- Newsletter and Social Media -->
+        <div class="footer-column newsletter">
+           
+           
+           
+           <br> <h3>Join Us</h3>
+           
+
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>© 2024, Adventure escape</p>
+    </div>
+
 </footer>
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </body>
 </html>

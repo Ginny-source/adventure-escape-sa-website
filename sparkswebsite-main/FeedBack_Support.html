@@ -1,99 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feed back and Support - Sparks Website</title>
+
+    <title>Feedback and Support - Sparks Website</title>
+
     <link rel="stylesheet" href="style.css">
-   
+    <script src="script.js"></script>
+
 </head>
+
 <body>
-   <!-- Header / Navigation Bar -->
+
+    <!-- HEADER / NAVIGATION -->
     <header class="site-header">
+
         <div class="logo-container">
-        <div class="logo-circle">
-            <img src="images/adventure escape sa.jpeg" width="300px" height="300px" alt="Adventure Escape SA Logo" class="brand-logo">
+
+            <div class="logo-circle">
+
+                <img
+                    src="images/adventure escape sa.jpeg"
+                    width="300"
+                    height="300"
+                    alt="Adventure Escape SA Logo"
+                    class="brand-logo"
+                >
+
+            </div>
+
         </div>
-        </div>
+
         <br>
+
         <nav class="nav-links">
-            <a href="index.html" >HOME</a>
+
+            <a href="index.html">HOME</a>
             <a href="aboutus.html">ABOUT US</a>
             <a href="packages.html">PACKAGES</a>
             <a href="feespage.html">FEES</a>
             <a href="contactus.html">CONTACT US</a>
-            <a href="indivisual.html"> INDIVISUAL</a>
-            <a href="overview.html"> OVERVIEW</a>
-            <a href="FeedBack_Support.html"> FEEDBACK&SUPPORT</a>
+            <a href="indivisual.html">INDIVISUAL</a>
+            <a href="overview.html">OVERVIEW</a>
+            <a href="FeedBack_Support.html" class="active">FEEDBACK & SUPPORT</a>
             <a href="booking.html">BOOKINGS</a>
             <a href="gallery.html">GALLERY</a>
-            
+
         </nav>
+
     </header>
+
+
+   
+    <!-- TESTIMONIALS SECTION -->
     
-    <!--Feedback section-->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSem8nBNdqzvHJgDGve_T3e-KMQSzEkWZArmhFd3jIPRKlxKKw/viewform?embedded=true" width="640" height="957" frameborder="0" marginheight="0" marginwidth="0">Loading…
-        
-    </iframe>
 
-   <!-- Rate Us Section -->
-    <main class="rate-page">
-        <div class="container">
-            <h1 class="page-main-title">Rate Us</h1>
+    <section class="testimonials">
 
-            <div class="rate-grid">
-                
-                <!-- Left Column: Feedback Form -->
-                <div class="rate-form-side">
-                    <h2>PLEASE RATE US!</h2>
-                    <p class="rate-subtitle">Every feedback matter to us, tell us how was your recent experience at our packages and activities</p>
+        <div class="testimonials-container">
 
-                    <div class="rating-question">
-                        <h3>HOW WAS THE EXPERIECE?</h3>
-                        <div class="stars">
-                            <span class="star active">★</span>
-                            <span class="star active">★</span>
-                            <span class="star active">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                        </div>
-                    </div>
+            <h1>What Our Clients Are Saying</h1>
 
-                    <div class="comments-section">
-                        <h3>COMMENTS (Optional)</h3>
-                        <div class="comment-box-wrapper">
-                            <textarea placeholder="Write your comment here" maxlength="200" oninput="updateCount(this)"></textarea>
-                            <span class="char-count" id="charCount">0/200</span>
-                        </div>
-                    </div>
+            <div class="stars">
+                ★★★★★
+            </div>
 
-                    <button class="btn-submit" onclick="alert('Thank you for your feedback!')">Submit Review</button>
+            <div class="reviews">
+
+                <div class="review">
+
+                    <p>
+                        "The moment I walked in, I felt completely relaxed.
+                        The atmosphere was beautiful and I caught a bit of
+                        fresh air away from the kids."
+                    </p>
+
+                    <h3>— Emily R.</h3>
+
                 </div>
 
-                <!-- Right Column: Images Grid -->
-                <div class="rate-images-side">
-                    <div class="image-card">
-                        <img src="images/zipline (2).avif" alt="Zip line adventure">
-                    </div>
-                    <div class="image-card vertical">
-                        <img src="images/team 2.avif" alt="Guides in forest">
-                    </div>
+
+                <div class="review">
+
+                    <p>
+                        "I'm completely obsessed with my experience!
+                        The attention to detail and care is truly
+                        unmatched."
+                    </p>
+
+                    <h3>— Sarah L.</h3>
+
+                </div>
+
+
+                <div class="review">
+
+                    <p>
+                        "From start to finish, the experience was amazing.
+                        The team made me feel so comfortable and confident."
+                    </p>
+
+                    <h3>— Jessica M.</h3>
+
                 </div>
 
             </div>
+
         </div>
-    </main>
 
-    <!-- Simple character count script -->
-    <script>
-        function updateCount(textarea) {
-            const count = textarea.value.length;
-            document.getElementById('charCount').innerText = `${count}/200`;
-        }
-    </script>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Sparks Website</p>
-    </footer>
+
+
+  
+    <!-- GALLERY SECTION -->
+ 
+
+    <section class="gallery">
+
+        <div class="gallery-overlay"></div>
+
+        <div class="gallery-content">
+
+            <div class="gallery-heading">
+
+                <h2>The Gallery</h2>
+
+            </div>
+
+
+            <!-- GALLERY IMAGES -->
+
+            <div class="gallery-images">
+
+                <div class="gallery-item">
+
+                    <img
+                        src="images/a lady ziplining.jpg"
+                        alt="A woman ziplining"
+                    >
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="images/family explorer.avif"
+                        alt="Family adventure package"
+                    >
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="images/unlimited package.avif"
+                        alt="Unlimited adventure package"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- VIEW MORE BUTTON -->
+
+            <div class="gallery-button-container">
+
+                <a href="gallery.html" class="view-more-btn">
+                    VIEW MORE
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- IMPORTANT: Gallery section now closes here -->
+
+
+  
+    <!-- MOMENTS OF INDULGENCE SECTION -->
+   
+
+    <section class="intro-section">
+
+        <div class="intro-container">
+
+
+            <!-- LEFT: IMAGE COLLAGE -->
+
+            <div class="image-collage">
+
+                <div class="image-top">
+
+                    <img
+                        src="images/team 2.avif"
+                        alt="Beauty treatment"
+                    >
+
+                </div>
+
+
+                <div class="image-bottom-left">
+
+                    <img
+                        src="images/zipline (2).avif"
+                        alt="Skincare products"
+                    >
+
+                </div>
+
+
+                <div class="image-bottom-right">
+
+                    <img
+                        src="images/mountain.avif"
+                        alt="Beauty portrait"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT: INTRODUCTION TEXT -->
+
+            <div class="intro-text">
+
+                <h1>
+                    Service summary
+                    <br>
+                    Just For You
+                </h1>
+
+                <h4>
+                    PERSONALIZED CARE AND EXPERT AESTHETICS
+                </h4>
+
+                <p>
+                   Discover exciting outdoor adventures with Adventure Escape SA! Enjoy thrilling activities, family-friendly experiences, ziplining and adventure packages designed to bring people together and create unforgettable memories.
+                </p>
+
+                
+                <a href="booking.html" class="book-button">
+                    BOOK NOW
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    
+    <!-- SERVICES SECTION -->
+    
+
+    <section class="services-section">
+
+        <div class="services-container">
+
+
+            <!-- SERVICES HEADING -->
+
+            <div class="services-heading">
+
+                <h2>Services</h2>
+
+                <p>
+                    Adventure Escape SA offers exciting outdoor adventures and unforgettable experiences for individuals, families and groups. From thrilling ziplining adventures to fun-filled family activities and unlimited adventure packages, we provide opportunities to explore nature, challenge yourself and create lasting memories. Whether you're looking for an adrenaline rush, quality family time or a relaxing escape from everyday life, Adventure Escape SA has something for everyone. Explore more, experience more and escape the ordinary!
+                </p>
+
+            </div>
+
+
+            <!-- SERVICES GRID -->
+
+            <div class="services-grid">
+
+
+                
+
+                <div class="service-card">
+
+                    <div class="service-image">
+
+                        <img
+                            src="images/WhatsApp Image 2026-10-28 at 13.31.57.jpeg"
+                            alt="our services"
+                        >
+
+                    </div>
+
+                    <h3>Activities</h3>
+
+                </div>
+
+
+               
+
+                <div class="service-card">
+
+                    <div class="service-image">
+
+                        <img
+                            src="images/Rosettas-Buffeet-Hero-1024x500-1.webp"
+                            alt="Professional eyebrow treatment"
+                        >
+
+                    </div>
+
+                    <h3>Buffet</h3>
+
+                </div>
+
+
+                
+
+                <div class="service-card">
+
+                    <div class="service-image">
+
+                        <img
+                            src="images/WhatsApp Image 2026-10-28 at 13.31.52.jpeg"
+                            alt="our clients"
+                        >
+
+                    </div>
+
+                    <h3>Clients</h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- SERVICES BOOKING BUTTON -->
+
+            <div class="services-booking">
+
+                <a href="booking.html" class="book-button">
+                    BOOK NOW
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+     <!-- FOOTER SECTION -->
+<footer class="footer">
+
+    <!-- Logo -->
+    <div class="footer-logo">
+        <h2>ADVENTURE </h2>
+        <h3>ESCAPE</h3>
+    </div>
+
+    <div class="footer-container">
+
+        <!-- FAQs -->
+        <div class="footer-column">
+            <h3>FAQs</h3>
+            <ul>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="FeedBack_Support.html">Feedback</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="booking.html">Bookings</a></li>
+            </ul>
+        </div>
+
+        <!-- About -->
+        <div class="footer-column">
+            <h3>About</h3>
+            <ul>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="indivisual.html">Indivisual Activities</a></li>
+                <li><a href="index.html">Home page</a></li>
+                <li><a href="contactus.html">Location</a></li>
+              
+            </ul>
+        </div>
+
+       <!-- Newsletter and Social Media -->
+        <div class="footer-column newsletter">
+           
+           
+           
+           <br> <h3>Join Us</h3>
+           
+
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>© 2024, Adventure escape</p>
+    </div>
+
+</footer>
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
 </body>
+
 </html>
+

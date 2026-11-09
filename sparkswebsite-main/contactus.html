@@ -1,121 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adventure Escape SA | Contact</title>
-  <link rel="stylesheet" href="style.css">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Adventure Escape SA | Contact</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
 </head>
+
 <body>
-<!-- Header / Navigation Bar -->
+
+    <!-- HEADER / NAVIGATION -->
     <header class="site-header">
+
         <div class="logo-container">
-        <div class="logo-circle">
-            <img src="images/adventure escape sa.jpeg" width="300px" height="300px" alt="Adventure Escape SA Logo" class="brand-logo">
+
+            <div class="logo-circle">
+
+                <img
+                    src="images/adventure escape sa.jpeg"
+                    width="300"
+                    height="300"
+                    alt="Adventure Escape SA Logo"
+                    class="brand-logo"
+                >
+
+            </div>
+
         </div>
-        </div>
+
         <br>
+
         <nav class="nav-links">
-            <a href="index.html" class="active">HOME</a>
+
+            <a href="index.html">HOME</a>
             <a href="aboutus.html">ABOUT US</a>
             <a href="packages.html">PACKAGES</a>
             <a href="feespage.html">FEES</a>
-            <a href="contactus.html">CONTACT US</a>
-            <a href="indivisual.html"> INDIVISUAL</a>
-            <a href="overview.html"> OVERVIEW</a>
-            <a href="FeedBack_Support.html"> FEEDBACK&SUPPORT</a>
+            <a href="contactus.html" class="active">CONTACT US</a>
+            <a href="indivisual.html">INDIVISUAL</a>
+            <a href="overview.html">OVERVIEW</a>
+            <a href="FeedBack_Support.html">FEEDBACK & SUPPORT</a>
             <a href="booking.html">BOOKINGS</a>
             <a href="gallery.html">GALLERY</a>
-          
+
         </nav>
+
     </header>
 
-<main>
-  <!-- Contact Section -->
+
+    <!-- CONTACT SECTION -->
     <main class="contact-page">
+
         <div class="container">
-            
+
             <div class="contact-grid">
-                
-                <!-- Left Column: Intro & Details -->
+
+                <!-- LEFT COLUMN -->
                 <div class="contact-info-side">
+
                     <span class="section-tag">GET IN TOUCH</span>
+
                     <h1>Contact Us</h1>
-                    <p class="intro-text">We'd love to hear from you</p>
-                    <p class="description">Whether you're planning a solo expedition or a corporate team challenge, our adventure specialists are ready to help you build the perfect trip. We typically respond within one business day.</p>
+
+                    <p class="intro-text">
+                        We'd love to hear from you
+                    </p>
+
+                    <p class="description">
+                        Whether you're planning a solo expedition or a
+                        corporate team challenge, our adventure specialists
+                        are ready to help you build the perfect trip.
+                        We typically respond within one business day.
+                    </p>
 
                     <div class="info-blocks">
+
                         <div class="info-item">
+
                             <span class="info-label">HEADQUARTERS</span>
-                            <span class="info-value">12 Expedition Way, Cape Town, 8001</span>
+
+                            <span class="info-value"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.3210446488683!2d18.420497911177726!3d-33.93286997309016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc677ebfa3a187%3A0x6d3a989fdcebeba0!2sWembley%20Square!5e0!3m2!1sen!2sza!4v1794217840109!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></span>
+
                         </div>
+
                         <div class="info-item">
+
                             <span class="info-label">EMAIL</span>
-                            <span class="info-value">hello@apexwild.com</span>
+
+                            <span class="info-value">Adventureescape01@Gmail.com</span>
+
                         </div>
+
                         <div class="info-item">
+
                             <span class="info-label">PHONE</span>
-                            <span class="info-value">+1 800 APEX WILD</span>
+
+                            <span class="info-value">+100 542183</span>
+
                         </div>
+
                         <div class="info-item">
+
                             <span class="info-label">HOURS</span>
-                            <span class="info-value">Mon–Fri 08:00–18:00 SAST</span>
+
+                            <span class="info-value">
+                                Mon–Fri 08:00–18:00 SAST
+                            </span>
+
                         </div>
+
                     </div>
+
                 </div>
 
-                <!-- Right Column: Interactive Form Box -->
-                <div class="contact-form-card">
-                    <form onsubmit="event.preventDefault(); alert('Enquiry sent successfully!');">
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>FULL NAME *</label>
-                                <input type="text" placeholder="Jordan Müller" required>
-                            </div>
-                            <div class="form-group">
-                                <label>EMAIL *</label>
-                                <input type="email" placeholder="jordan@example.com" required>
-                            </div>
-                        </div>
 
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>PHONE</label>
-                                <input type="tel" placeholder="+1 555 000 0000">
-                            </div>
-                            <div class="form-group">
-                                <label>I'M INTERESTED IN</label>
-                                <select>
-                                    <option>Multi-day Packages</option>
-                                    <option>Individual Activities</option>
-                                    <option>Custom Expedition</option>
-                                    <option>Corporate / Group</option>
-                                </select>
-                            </div>
-                        </div>
+                <!-- RIGHT COLUMN: FORM -->
+                 <form>
+                <div class="contact-form-side">
 
-                        <div class="form-group full-width">
-                            <label>MESSAGE *</label>
-                            <textarea rows="5" placeholder="Tell us about your adventure goals, preferred dates, group size, and any special requirements..." required></textarea>
-                        </div>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdUngRctkyBzKsNSdmsmE0QG1xu0tYz-wKdScTsievbBTiopg/viewform?embedded=true" width="700" height="957" frameborder="2" marginheight="25" marginwidth="25">Loading…</iframe>
 
-                        <button type="submit" class="btn-submit">Send Enquiry</button>
+                        <!-- SUBMIT BUTTON -->
+                        <button type="submit">
+                            Submit
+                        </button>
 
                     </form>
+
                 </div>
 
             </div>
 
         </div>
+
     </main>
 
 
-<footer>
-  <p><strong>Adventure Escape SA</strong></p>
-  <p>Explore more. Experience more. Escape the ordinary.</p>
+    <!-- SUCCESS POPUP -->
+    <div class="popup" id="successPopup">
+
+        <div class="popup-card">
+
+            <h2>Success!</h2>
+
+            <p id="feedbackMessage">
+                Your form has been submitted successfully.
+            </p>
+
+            <button type="button" id="closePopup">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER SECTION -->
+<footer class="footer">
+
+    <!-- Logo -->
+    <div class="footer-logo">
+        <h2>ADVENTURE </h2>
+        <h3>ESCAPE</h3>
+    </div>
+
+    <div class="footer-container">
+
+        <!-- FAQs -->
+        <div class="footer-column">
+            <h3>FAQs</h3>
+            <ul>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="FeedBack_Support.html">Feedback</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="booking.html">Bookings</a></li>
+            </ul>
+        </div>
+
+        <!-- About -->
+        <div class="footer-column">
+            <h3>About</h3>
+            <ul>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="indivisual.html">Indivisual Activities</a></li>
+                <li><a href="index.html">Home page</a></li>
+                <li><a href="contactus.html">Location</a></li>
+              
+            </ul>
+        </div>
+
+        <!-- Newsletter and Social Media -->
+        <div class="footer-column newsletter">
+           
+           
+           
+           <br> <h3>Join Us</h3>
+           
+
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>© 2024, Adventure escape</p>
+    </div>
+
 </footer>
 
+<!-- Font Awesome Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </body>
+
 </html>

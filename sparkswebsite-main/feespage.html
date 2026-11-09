@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adventure Escape SA | Fees & Packages</title>
    <link rel="stylesheet" href="style.css">
+   <script src="script.js"></script>  
 </head>
 
 <header>
@@ -34,233 +35,157 @@
     <body>
 
   <!-- Fee Calculator Section -->
-    <main class="calculator-page">
-        <div class="container">
-            
-            <div class="page-header">
-                <span class="section-tag">PLAN YOUR TRIP</span>
-                <h1>Fee Calculator</h1>
+     <main class="calculator-page">
+    <div class="container">
+      <div class="page-header">
+        <span class="section-tag">PLAN YOUR TRIP</span>
+        <h1>Fee Calculator</h1>
+        <p class="selection-note">Your package and activities are shown below. Prices are calculated per person.</p>
+      </div>
+
+      <div class="empty-state-card" id="emptyState" hidden>
+        <h2>No items selected yet</h2>
+        <p>Choose a package and/or individual activities before continuing.</p>
+        <a href="packages.html" class="btn-primary">Browse Adventures</a>
+      </div>
+
+      <div class="calculator-layout" id="populatedState">
+        <section class="selected-items-column">
+          <h2>Selected Items</h2>
+          <div id="itemsList" class="selected-items-list"></div>
+          <div class="selected-actions">
+            <a href="packages.html" class="btn-add-more">+ Change / add package</a>
+            <a href="indivisual.html" class="btn-add-more">+ Add more activities</a>
+            <button type="button" class="text-button" id="clearSelectionBtn">Clear all selections</button>
+          </div>
+        </section>
+
+        <aside class="cost-summary-card">
+          <h2>Cost Summary</h2>
+
+          <div class="summary-row-control">
+            <span class="control-label">GROUP SIZE</span>
+            <div class="counter-box">
+              <button type="button" id="decreaseGroup" aria-label="Decrease group size">−</button>
+              <span id="groupSizeCount">1</span>
+              <button type="button" id="increaseGroup" aria-label="Increase group size">+</button>
             </div>
+            <span class="control-sublabel">person(s)</span>
+          </div>
 
-            <!-- EMPTY STATE CONTAINER (Shown when cart is empty) -->
-            <div class="empty-state-card" id="emptyState" style="display: none;">
-                <h2>No items selected yet</h2>
-                <p>Browse packages and activities, then add them to your booking.</p>
-                <a href="packages.html" class="btn-primary">Browse Adventures</a>
+          <div class="discount-info">
+            <strong>Booking discounts</strong>
+            <p>1 selected item: no discount</p>
+            <p>2 selected items: 5% discount</p>
+            <p>3 selected items: 10% discount</p>
+            <p>4 or more selected items: 15% discount</p>
+          </div>
+
+          <div class="promo-section">
+            <label class="control-label" for="promoInput">PROMO CODE</label>
+            <div class="promo-input-group">
+              <input type="text" id="promoInput" placeholder="Enter code" autocomplete="off">
+              <button type="button" id="applyPromoBtn">Apply</button>
             </div>
+            <span class="promo-hint">Try: WILD10 (additional 10% off)</span>
+            <p id="promoMessage" class="form-message" aria-live="polite"></p>
+          </div>
 
-            <!-- POPULATED STATE CONTAINER (Shown when items are selected) -->
-            <div class="calculator-layout" id="populatedState">
-                
-                <!-- Left Column: Selected Items -->
-                <div class="selected-items-column">
-                    <h2>Selected Items</h2>
-                    
-                    <div id="itemsList">
-                        <!-- Sample Item Card -->
-                        <div class="selected-item-card">
-                            <img src="images/a lady ziplining.jpg" alt="Ziplining">
-                            <div class="item-details">
-                                <span class="item-badge">Indivisual activity</span>
-                                <h3>Ziplining</h3>    
-                            </div>
-                            <div class="item-pricing">
-                                <span class="item-price">R750.00</span>
-                                <span class="item-per">per person</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="itemsList">
-                        <!-- Sample Item Card -->
-                        <div class="selected-item-card">
-                            <img src="images/kayaking.jpg" alt="Kayaking">
-                            <div class="item-details">
-                                <span class="item-badge">Indivisual activity</span>
-                                <h3>kayaking</h3>              
-                            </div>
-                            <div class="item-pricing">
-                                <span class="item-price">R750.00</span>
-                                <span class="item-per">per person</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="itemsList">
-                        <!-- Sample Item Card -->
-                        <div class="selected-item-card">
-                            <img src="images/rock climbing.avif" alt="Rock Climbing">
-                            <div class="item-details">
-                                <span class="item-badge">Individual activity</span>
-                                <h3>Rock Climbing</h3>
-                                </div>
-                            <div class="item-pricing">
-                                <span class="item-price">R750.00</span>
-                                <span class="item-per">per person</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="packages.html" class="btn-add-more">+ Add more activities</a>
-                </div>
-
-                <!-- Right Column: Cost Summary Sidebar -->
-                <div class="cost-summary-card">
-                    <h2>Cost Summary</h2>
-
-                    <!-- Group Size Counter -->
-                    <div class="summary-row-control">
-                        <span class="control-label">GROUP SIZE</span>
-                        <div class="counter-box">
-                            <button onclick="updateGroupSize(-1)">−</button>
-                            <span id="groupSizeCount">1</span>
-                            <button onclick="updateGroupSize(1)">+</button>
-                        </div>
-                        <span class="control-sublabel">person</span>
-                    </div>
-
-                    <!-- Add-ons Checkboxes -->
-                    <div class="add-ons-section">
-                        <span class="control-label">ADD-ONS</span>
-                        
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="insuranceCheck" onchange="calculateTotal()" checked>
-                            <span class="checkmark"></span>
-                            <div class="checkbox-text">
-                                <strong>The more the booking the greater the discount</strong>
-                               <li><p>One bookings: no discount</p>
-                                  <p>Two bookings: 5% discount </p>
-                                  <p>Three bookings: 10% discount</p>
-                                  <p>More than 3 bookings: 15% discount</p>
-                                </li> 
-                            </div>
-                        </label>
-                        
-                    </div>
-
-                    <!-- Promo Code Input -->
-                    <div class="promo-section">
-                        <span class="control-label">PROMO CODE</span>
-                        <div class="promo-input-group">
-                            <input type="text" id="promoInput" placeholder="Enter code">
-                            <button onclick="applyPromo()">Apply</button>
-                        </div>
-                        <span class="promo-hint">Try: WILD10</span>
-                    </div>
-
-                    <!-- Live Breakdown Details -->
-                    <div class="breakdown-list">
-                        <div class="breakdown-item">
-                            <span id="breakdownItemCount">2 item × 1</span>
-                            <span id="breakdownSubtotal">R1500.00</span>
-                        </div>
-                        <div class="breakdown-item" id="insuranceRow">
-                            <span>Two bookings: 5% discount</span>
-                            <span id="breakdownInsurance">R1425.00</span>
-                        </div>
-                        
-                    </div>
-
-                    <!-- Total Display -->
-                    <div class="total-section">
-                        <div class="total-header">
-                            <span>TOTAL</span>
-                            <span class="total-per" id="totalPerPerson">R750.00 per person</span>
-                        </div>
-                        <div class="total-amount" id="totalAmount">$3,758</div>
-                    </div>
-
-                    <button class="btn-proceed" <a href="booking.html" class="btn-proceed">Proceed to booking</a></button>
-                    
-                </div>
-
+          <div class="breakdown-list">
+            <div class="breakdown-item">
+              <span id="breakdownItemCount">0 items × 1 person</span>
+              <span id="breakdownSubtotal">R0.00</span>
             </div>
+            <div class="breakdown-item" id="bookingDiscountRow">
+              <span id="bookingDiscountLabel">Booking discount</span>
+              <span id="bookingDiscountAmount">-R0.00</span>
+            </div>
+            <div class="breakdown-item" id="promoDiscountRow">
+              <span>WILD10 promo discount</span>
+              <span id="promoDiscountAmount">-R0.00</span>
+            </div>
+          </div>
 
+          <div class="total-section">
+            <div class="total-header">
+              <span>TOTAL</span>
+              <span class="total-per" id="totalPerPerson">R0.00 per person</span>
+            </div>
+            <div class="total-amount" id="totalAmount">R0.00</div>
+          </div>
+
+          <button type="button" class="btn-proceed" id="proceedToBookingBtn">Proceed to booking</button>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+    <!-- FOOTER SECTION -->
+<footer class="footer">
+
+    <!-- Logo -->
+    <div class="footer-logo">
+        <h2>ADVENTURE </h2>
+        <h3>ESCAPE</h3>
+    </div>
+
+    <div class="footer-container">
+
+        <!-- FAQs -->
+        <div class="footer-column">
+            <h3>FAQs</h3>
+            <ul>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="FeedBack_Support.html">Feedback</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="booking.html">Bookings</a></li>
+            </ul>
         </div>
-    </main>
 
-    <!-- Calculator Logic Script -->
-    <script>
-        let basePrice = 3480;
-        let groupSize = 1;
-        let isDiscountApplied = false;
+        <!-- About -->
+        <div class="footer-column">
+            <h3>About</h3>
+            <ul>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="indivisual.html">Indivisual Activities</a></li>
+                <li><a href="index.html">Home page</a></li>
+                <li><a href="contactus.html">Location</a></li>
+              
+            </ul>
+        </div>
 
-        function updateGroupSize(change) {
-            groupSize += change;
-            if (groupSize < 1) groupSize = 1;
+       <!-- Newsletter and Social Media -->
+        <div class="footer-column newsletter">
+           
+           
+           
+           <br> <h3>Join Us</h3>
+           
+
             
-            document.getElementById('groupSizeCount').innerText = groupSize;
-            document.getElementById('transferPersonCount').innerText = groupSize;
-            calculateTotal();
-        }
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
 
-        function applyPromo() {
-            const code = document.getElementById('promoInput').value.trim().toUpperCase();
-            if (code === 'WILD10') {
-                isDiscountApplied = true;
-                alert('Promo code WILD10 applied successfully! (10% off)');
-                calculateTotal();
-            } else {
-                alert('Invalid code. Try entering WILD10');
-            }
-        }
+    </div>
 
-        function calculateTotal() {
-            let subtotal = basePrice * groupSize;
-            
-            // Item breakdown text
-            document.getElementById('breakdownItemCount').innerText = `1 item × ${groupSize} person${groupSize > 1 ? 's' : ''}`;
-            document.getElementById('breakdownSubtotal').innerText = `$${subtotal.toLocaleString()}`;
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>© 2024, Adventure escape</p>
+    </div>
 
-            let discountAmount = 0;
-            if (isDiscountApplied) {
-                discountAmount = subtotal * 0.10;
-                document.getElementById('discountRow').style.display = 'flex';
-                document.getElementById('breakdownDiscount').innerText = `-$${discountAmount.toLocaleString()}`;
-                subtotal -= discountAmount;
-            } else {
-                document.getElementById('discountRow').style.display = 'none';
-            }
+</footer>
 
-            let runningTotal = subtotal;
-
-            // Insurance Check
-            const hasInsurance = document.getElementById('insuranceCheck').checked;
-            if (hasInsurance) {
-                let insuranceCost = subtotal * 0.08;
-                document.getElementById('insuranceRow').style.display = 'flex';
-                document.getElementById('breakdownInsurance').innerText = `$${insuranceCost.toLocaleString(undefined, {maximumFractionDigits: 0})}`;
-                runningTotal += insuranceCost;
-            } else {
-                document.getElementById('insuranceRow').style.display = 'none';
-            }
-
-            // Transfer Check
-            const hasTransfer = document.getElementById('transferCheck').checked;
-            if (hasTransfer) {
-                let transferCost = 95 * groupSize;
-                document.getElementById('transferRow').style.display = 'flex';
-                document.getElementById('breakdownTransfer').innerText = `$${transferCost.toLocaleString()}`;
-                runningTotal += transferCost;
-            } else {
-                document.getElementById('transferRow').style.display = 'none';
-            }
-
-            let perPersonTotal = Math.round(runningTotal / groupSize);
-
-            document.getElementById('totalAmount').innerText = `$${Math.round(runningTotal).toLocaleString()}`;
-            document.getElementById('totalPerPerson').innerText = `$${perPersonTotal.toLocaleString()} per person`;
-        }
-
-        function proceedToEnquiry() {
-            alert('Proceeding to inquiry with your selected custom package!');
-        }
-    </script>
+<!-- Font Awesome Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   
 </body>
 </html>
 
-<footer>
-  <p><strong>Adventure Escape SA</strong></p>
-  <p>All package prices shown in South African Rand (ZAR).</p>
-</footer>
+
 

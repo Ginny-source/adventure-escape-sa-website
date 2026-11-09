@@ -3,86 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adventure Escape SA | Project Overview</title>
+  <title>Adventure Escape SA | Package Overview</title>
   <link rel="stylesheet" href="style.css">
-  
+  <link rel="stylesheet" href="adventure-booking-additions.css">
+  <script src="script.js"></script>
 </head>
 <body>
-<!-- Header / Navigation Bar -->
-    <header class="site-header">
-        <div class="logo-container">
-        <div class="logo-circle">
-            <img src="images/adventure escape sa.jpeg" width="300px" height="300px" alt="Adventure Escape SA Logo" class="brand-logo">
-        </div>
-        </div>
-        <br>
-        <nav class="nav-links">
-            <a href="index.html" >HOME</a>
-            <a href="aboutus.html">ABOUT US</a>
-            <a href="packages.html">PACKAGES</a>
-            <a href="feespage.html">FEES</a>
-            <a href="contactus.html">CONTACT US</a>
-            <a href="indivisual.html"> INDIVISUAL</a>
-            <a href="overview.html"> OVERVIEW</a>
-            <a href="FeedBack_Support.html"> FEEDBACK&SUPPORT</a>
-            <a href="booking.html">BOOKINGS</a>
-            <a href="gallery.html">GALLERY</a>
-            
-        </nav>
-    </header>
+  <header class="site-header">
+    <div class="logo-container"><div class="logo-circle">
+      <img src="images/adventure escape sa.jpeg" width="300" height="300" alt="Adventure Escape SA Logo" class="brand-logo">
+    </div></div>
+    <nav class="nav-links">
+      <a href="index.html">HOME</a><a href="aboutus.html">ABOUT US</a>
+      <a href="packages.html">PACKAGES</a><a href="feespage.html">FEES</a>
+      <a href="contactus.html">CONTACT US</a><a href="indivisual.html">INDIVISUAL</a>
+      <a href="overview.html" aria-current="page">OVERVIEW</a>
+      <a href="FeedBack_Support.html">FEEDBACK&amp;SUPPORT</a><a href="booking.html">BOOKINGS</a>
+      <a href="gallery.html">GALLERY</a>
+    </nav>
+  </header>
+  <main class="overview-page">
+    <div class="overview-page-inner">
+      <div class="page-header"><span class="section-tag">OVERVIEW</span>
+        <h1>Review Your Adventure</h1>
+        <p>Check the package you selected before moving to the fee calculator.</p>
+      </div>
+      <div id="overviewContent" aria-live="polite"></div>
+    </div>
+  </main>
+   <!-- FOOTER SECTION -->
+<footer class="footer">
 
-        <!-- Overview Section -->
-        <section class="overview-section">
-            <div class="section-tag">OVERVIEW</div>
-            <div class="overview-card">
-                <div class="overview-text">
-                    Outdoor adventure activity that allows participants and families to glide along and enjoy their days and holidays.
-                </div>
-                <div class="overview-thumb"></div>
-            </div>
-        </section>
-
-        <!-- Filters Bar -->
-        <div class="filters-bar">
-            <span class="filter-label">FILTERS</span>
-            <button class="filter-btn">ALL</button>
-            <button class="filter-btn">PACKAGES</button>
-            <button class="filter-btn">BOOKINGS</button>
-            <button class="filter-btn">FEES</button>
-        </div>
-
-        <!-- Pro Tip Section -->
-        <div class="pro-tip">
-            <div class="pro-tip-title">PRO TIP:</div>
-            <div class="pro-tip-desc">2023 MULTIPLE PACKAGES - COMPRESS ALL FEES ON THE TAG</div>
-        </div>
-
-        <!-- Gallery Grid (Matching layout structure) -->
-        <div class="gallery-grid">
-            <div class="gallery">
-                <div class="view-badge">VIEW</div>
-            </div>
-            <div class="gallery">
-                <div class="view-badge">VIEW</div>
-            </div>
-            <div class="gallery" style="margin-top: -30px;">
-                <div class="view-badge">VIEW</div>
-            </div>
-            <div class="gallery" style="margin-top: -60px;">
-                <div class="view-badge">VIEW</div>
-            </div>
-        </div>
-
-        <!-- Pagination -->
-        <div class="pagination">
-            <div class="page-box active">1</div>
-            <div class="page-box">2</div>
-            <div class="page-box">3</div>
-            <div class="page-box">4</div>
-            <div class="page-box">5</div>
-        </div>
+    <!-- Logo -->
+    <div class="footer-logo">
+        <h2>ADVENTURE </h2>
+        <h3>ESCAPE</h3>
     </div>
 
+    <div class="footer-container">
 
-</body>
-</html>
+        <!-- FAQs -->
+        <div class="footer-column">
+            <h3>FAQs</h3>
+            <ul>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="FeedBack_Support.html">Feedback</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="booking.html">Bookings</a></li>
+            </ul>
+        </div>
+
+        <!-- About -->
+        <div class="footer-column">
+            <h3>About</h3>
+            <ul>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="indivisual.html">Indivisual Activities</a></li>
+                <li><a href="index.html">Home page</a></li>
+                <li><a href="contactus.html">Location</a></li>
+              
+            </ul>
+        </div>
+
+        <!-- Newsletter and Social Media -->
+        <div class="footer-column newsletter">
+           
+           
+           
+           <br> <h3>Join Us</h3>
+           
+
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>© 2024, Adventure escape</p>
+    </div>
+
+</footer>
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
