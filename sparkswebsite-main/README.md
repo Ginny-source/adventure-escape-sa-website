@@ -4,8 +4,8 @@
 This is a tourism and outdoor activities website developed for adventurous experiences. 
 The website showcases hiking, zipline, climbing and buffet services with 12 responsive HTML pages.
 
-**Live Site:** https://moengapp.github.io/sparkswebsite/
-**Repository:** https://github.com/moengapp/sparkswebsite
+**Live Site:** 
+**Repository:** https://github.com/Ginny-source/adventure-escape-sa-website.git
 
 ## Website Structure (12 Pages)
 1. index.html - Home
@@ -26,6 +26,88 @@ The website showcases hiking, zipline, climbing and buffet services with 12 resp
 - HTML5
 - CSS3 (css/style.css)
 - Responsive Design
+- java script
+
+## Changelog 
+1. # Contact Form Validation
+
+Added JavaScript validation for the Contact Us form.
+
+Added validation for the first name and surname fields.
+
+Ensured that names contain letters and spaces only.
+
+Added phone number validation to accept numbers only.
+
+Ensured that phone numbers contain between 10 and 15 digits.
+
+Added email address validation.
+
+Added message field validation.
+
+2. # Error Messages
+
+Added individual error messages for each form field.
+
+Added the message "Empty field." when a required field is left blank.
+
+Added helpful messages when users enter invalid information.
+
+Added red borders to fields containing invalid information.
+
+Added green borders to fields that pass validation.
+
+Added functionality to update validation messages while users type.
+
+3. # Success Popup
+
+Added a success popup after the form is submitted correctly.
+
+Added a personalised confirmation message using the user's first name.
+
+Added an OK button to close the success popup.
+
+Added functionality to reset the form after successful submission.
+
+4. # JavaScript Improvements
+
+Organised Contact Us validation into a separate setupContactValidation() function.
+
+Added a check to ensure the Contact Us form exists before running its validation.
+
+Integrated Contact Us validation into the DOMContentLoaded event.
+
+Improved the organisation of the JavaScript code.
+
+5. # Existing Website Functionality
+
+The following existing JavaScript functionality was retained:
+
+Package selection.
+
+Activity selection.
+
+Fee calculator.
+
+Discount calculations.
+
+Booking form functionality.
+
+Package overview.
+
+Feedback form validation.
+
+6. # Files Updated
+
+script.js – Added and integrated Contact Us form validation.
+
+contact.html – Requires the correct form field IDs and success popup elements.
+
+style.css – Uses the existing styling for form fields, error messages and popup elements.
+
+booking.htlm - the cpage was not mooving to the calculation fee
+
+feescalculator.html - the fees were not calculated how we wanted them to but we managed to add java and make the functinality work
 
 ## Image References - Harvard Referencing (IIE Style)
 
