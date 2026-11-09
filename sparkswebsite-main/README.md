@@ -5,7 +5,7 @@ This is a tourism and outdoor activities website developed for adventurous exper
 The website showcases hiking, zipline, climbing and buffet services with 12 responsive HTML pages.
 
 **Live Site:** 
-**Repository:** https://github.com/Ginny-source/adventure-escape-sa-website.git
+**Repository:**  https://github.com/Ginny-source/adventure-escape-sa-website.git
 
 ## Website Structure (12 Pages)
 1. index.html - Home
